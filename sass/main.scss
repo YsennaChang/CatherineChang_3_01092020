@@ -1,0 +1,54 @@
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
+@import "./base/base";
+@import "./base/typography";
+@import "./components/buttons";
+@import "./layouts/header";
+@import "./layouts/nav";
+@import "./layouts/container";
+@import "./layouts/form";
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/project";
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('fontsroboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('fonts/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('fonts/shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+h1
+{
+    font-family: 'shrikhandregular';
+}
+
+
+h2, h3, h4, p
+{
+    font-family: 'robotoregular';
+}
+
+$breakpoint:(
+    mobile: 599px,
+);
+
+@mixin mobile-only{
+    @media screen and (max-width: map-get($breakpoint, mobile)){
+        @content;
+    };
+}
+
+
+
