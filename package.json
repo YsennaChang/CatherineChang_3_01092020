@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
-    "prefix":"postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/",
+    "prod" : "sass --watch ./sass/main.scss:./public/css/style.min.css --style compressed postcss ./public/css/style.min.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,6 @@
     "url": "https://github.com/YsennaChang/CatherineChang_3_01092020/issues"
   },
   "homepage": "https://github.com/YsennaChang/CatherineChang_3_01092020#readme",
-  "browserslist": "last 4 versions"
+  "browserslist": "last 4 versions",
+  "dependencies": {}
 }

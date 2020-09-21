@@ -1,54 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <title>OhMyFood</title>
-</head>
-<body>
-    <header>
-        <h1>Ohmyfoodbis</h1>
-    </header>
-    <main>
-        <!-- localisation -->
-        <h2>Book the menu you like</h2>
-        <p>Discover top-of-the-art restaurants picked for you</p>
-
-        <aside>
-            <h2>How it works</h2>
-            <p>Chose de restaurant</p>
-            <p>Create your menu</p>
-            <p>Go enjoy it at the restaurant</p>            
-        </aside>
-        <article>
-            <h2>Restaurants</h2>
-                <section>
-                    <h3> The Full Palette</h3>
-                    <p>New York</p>
-                </section>
-                <section>
-                    <h3>The Enchanted Plate</h3>
-                    <p>New York</p>
-                </section>
-                <section>
-                    <h3>Bastille</h3>
-                    <p>New York</p>
-                </section>
-                <section>
-                    <h3>Le Gourmand</h3>
-                    <p>New York</p>
-                </section>        
-        </article>
-    </main>
-    <footer>
-        <h1>Ohmyfood</h1>
-        <ul>
-            <li><p>Suggest a restaurant</p></li>
-            <li><p>Become a partener</p></li>
-            <li><p>Legal</p></li>
-            <li><p>Contact</p></li>
-        </ul>
-    </footer>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./public/css/style.css" />
+        <script src="https://kit.fontawesome.com/d8f867de61.js" crossorigin="anonymous"></script>
+        <title>OhMyFood</title>
+    </head>
+    <body>
+        <header>
+            <h1>Ohmyfood</h1>
+        </header>
+        <main>
+            <div class="localisation">
+                <p><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
+            </div>
+            <div class="introduction">
+                <h2>Book the menu you like</h2>
+                <p>Discover top-of-the-art restaurants we picked for you</p>
+                <p class="btn"> Explore our restaurants</p>
+            </div>
+            <aside>
+                <h2>How it works</h2>
+                <ol>
+                    <li><p><i class="fas fa-mobile-alt"></i>Chose a restaurant</p></li>
+                    <li><p><i class="fas fa-list-ul"></i>Create your menu</p></li>
+                    <li><p><i class="fas fa-store"></i>Go enjoy it at the restaurant</p></li>
+                </ol>            
+            </aside>
+            <article>
+                <h2>Restaurants</h2>
+                    <section class="restaurant">
+                        <div class="description">
+                            <h3> The Full Palette</h3>
+                            <p>New York</p>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </section>
+                    <section class="restaurant">
+                        <div class="description">
+                            <h3>The Enchanted Plate</h3>
+                            <p>New York</p>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </section>
+                    <section class="restaurant">
+                        <div class="description">
+                            <h3>Bastille</h3>
+                            <p>New York</p>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </section>
+                    <section class="restaurant">
+                        <div class="description">
+                            <h3>Le Gourmand</h3>
+                            <p>New York</p>
+                        </div>
+                        <i class="far fa-heart"></i>
+                    </section>        
+            </article>
+        </main>
+        <footer>
+            <h1>Ohmyfood</h1>
+            <ul>
+                <li><i class="fas fa-utensils"></i><p>Suggest a restaurant</p></li>
+                <li><i class="fas fa-hands-helping"></i><p>Become a partener</p></li>
+                <li><p>Legal</p></li>
+                <li><p>Contact</p></li>
+            </ul>
+        </footer>
+    </body>
 </html>
