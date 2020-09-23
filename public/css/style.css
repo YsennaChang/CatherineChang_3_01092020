@@ -1,3 +1,12 @@
+body {
+  width: 500px;
+  margin: auto;
+}
+
+main {
+  height: 100%;
+}
+
 @font-face {
   font-family: "robotoregular";
   src: url("../../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../../fonts/roboto-regular-webfont.woff") format("woff");
@@ -14,17 +23,93 @@ h1 {
   font-family: "shrikhandregular";
 }
 
-h2, h3, h4, p, li {
+h2, h3, h4, h5, p, li, div, a {
   font-family: "robotoregular";
 }
 
-body {
-  width: 500px;
+a {
+  text-decoration: none;
+}
+
+h5 {
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+h5 .line {
+  margin-top: 2px;
+  width: 35px;
+  border-top: 3px solid #99E2D0;
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+  min-width: 5em;
   margin: auto;
+  margin-top: 20px;
+  padding: 0.5rem 2rem;
+  border-radius: 10rem;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  background: linear-gradient(#FF79DA, 20%, #9356DC);
+  box-shadow: 0px 4px 4px #dbdbdb;
 }
 
 header {
   text-align: center;
+  position: relative;
+}
+header i {
+  cursor: pointer;
+  position: absolute;
+  left: 2rem;
+  top: 0.8rem;
+  font-size: 1.6rem;
+  color: black;
+}
+
+main #img__prez1 {
+  background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-menu.jpg") no-repeat;
+  position: relative;
+  height: 380px;
+  width: 100%;
+}
+main #img__prez2 {
+  background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-menu.jpg") no-repeat;
+  position: relative;
+  height: 380px;
+  width: 100%;
+}
+main #img__prez3 {
+  background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-menu.jpg") no-repeat;
+  position: relative;
+  height: 380px;
+  width: 100%;
+}
+main #img__prez4 {
+  background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-menu.jpg") no-repeat;
+  position: relative;
+  height: 380px;
+  width: 100%;
+}
+main h1 {
+  position: absolute;
+  width: 96%;
+  bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  background-color: #f4f4f4;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+main h1 i {
+  position: absolute;
+  right: 3rem;
 }
 
 .localisation {
@@ -49,77 +134,19 @@ header {
   line-height: 3em;
   color: #353535;
 }
-
-article {
-  background-color: #f4f4f4;
-}
-
-main {
-  height: 100%;
-}
-
-.btn {
-  cursor: pointer;
-  display: block;
-  width: fit-content;
+.introduction p {
+  display: inline-block;
   margin: auto;
-  padding: 0.5rem 2rem;
-  border-radius: 10rem;
+  line-height: 1.2;
+  width: 70%;
   text-align: center;
-  color: white;
-  font-size: 1rem;
-  font-weight: 900;
-  background: linear-gradient(#FF79DA, 20%, #9356DC);
-  box-shadow: 0px 4px 4px #dbdbdb;
+  word-break: break-all;
 }
 
-.restaurant {
-  cursor: pointer;
-  margin-top: 15px;
-  margin-bottom: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 380px;
-  height: 193px;
-  border-radius: 1rem;
-  position: relative;
-  box-shadow: 0px 4px 4px #353535;
+aside h2 {
+  padding-top: 20px;
+  padding-left: 20px;
 }
-.restaurant:nth-of-type(1) {
-  background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash 380 x 253.jpg") no-repeat;
-}
-.restaurant:nth-of-type(2) {
-  background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash380x316.jpg") no-repeat;
-}
-.restaurant:nth-of-type(3) {
-  background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash380x193.jpg") no-repeat;
-}
-.restaurant:nth-of-type(4) {
-  background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash380x260.jpg") no-repeat;
-}
-
-.description {
-  position: absolute;
-  bottom: 0;
-  border-radius: 0px 0px 5px 5px;
-  width: 100%;
-  height: 50px;
-  padding-top: 1px;
-  padding-left: 4px;
-  margin-top: 5px;
-  background-color: rgba(255, 255, 255, 0.89);
-  Color: black;
-  font-size: 0.8em;
-}
-.description h3 {
-  margin-top: 5px;
-  margin-bottom: 1px;
-}
-.description p {
-  margin-top: 1px;
-  margin-bottom: 2px;
-}
-
 aside ol {
   list-style: none;
   counter-reset: li;
@@ -132,11 +159,11 @@ aside ol p {
   margin-bottom: 15px;
   background-color: #f4f4f4;
   align-content: center;
-  border-radius: 1rem;
   box-shadow: 2px 4px 4px #dbdbdb, -1px -4px 4px #f4f4f4;
 }
 aside ol li {
   counter-increment: li;
+  cursor: pointer;
 }
 aside ol i {
   padding-left: 20px;
@@ -148,26 +175,121 @@ aside ol li::before {
   color: white;
   display: inline-block;
   text-align: center;
-  width: 1em;
+  width: 1.5em;
   margin-left: -1em;
   background-color: #9356DC;
   border-radius: 50%;
 }
 
 article {
+  background-color: #f4f4f4;
   width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+article a:nth-of-type(1) div:first-child {
+  background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash 380 x 253.jpg") no-repeat;
+}
+article a:nth-of-type(2) div:first-child {
+  background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash380x316.jpg") no-repeat;
+}
+article a:nth-of-type(3) div:first-child {
+  background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash380x193.jpg") no-repeat;
+}
+article a:nth-of-type(4) div:first-child {
+  background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash380x260.jpg") no-repeat;
+}
+article h2 {
+  padding-top: 0px;
+  padding-left: 20px;
+}
+article .restaurant {
+  width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+article .restaurant__img {
+  cursor: pointer;
+  position: relative;
+  margin-top: 15px;
+  height: 190px;
+  border-radius: 1rem 1rem 0 0;
+}
+article .restaurant__img--new {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 90px;
+  height: 30px;
+  text-align: center;
+  line-height: 1.8;
+  color: #1b6150;
+  background-color: #99E2D0;
+  font-weight: bold;
+}
+article .restaurant__description {
+  cursor: pointer;
+  position: relative;
+  border-radius: 0 0 1rem 1rem;
+  padding-top: 1px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  padding-left: 4px;
+  background-color: white;
+  font-size: 0.8em;
+  box-shadow: 2px 5px 5px #dbdbdb, -2px 0 5px #dbdbdb;
+}
+article .restaurant__description h3 {
+  margin-top: 5px;
+  margin-bottom: 1px;
+  margin-left: 5px;
+  color: #353535;
+}
+article .restaurant__description p {
+  margin-top: 1px;
+  margin-bottom: 2px;
+  margin-left: 5px;
+  color: #353535;
+}
+article .restaurant__description i {
+  cursor: pointer;
+  position: absolute;
+  font-size: 1.7em;
+  color: #353535;
+  right: 2rem;
+  top: 0.6em;
+}
+article .restaurant__description--arrounded {
+  border-radius: 1rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+article .restaurant__description span {
+  position: absolute;
+  right: 4rem;
+  bottom: 1rem;
 }
 
 footer {
   background-color: #353535;
+  padding-bottom: 10px;
   color: white;
+}
+footer h1 {
+  margin-top: 0;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 footer ul {
   list-style: none;
 }
 footer i {
-  margin-left: -2em;
-  margin-right: 1em;
+  width: 2em;
+}
+footer a {
+  color: white;
+  font-style: normal;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -19,8 +19,25 @@
 //     box-sizing: border-box;
 //     border: 1px solid black;
 // }
-  
 
+body{
+    width: 500px;
+    margin:auto;
+}
+
+main {
+    height: 100%;
+}
+
+// Colors========================================
+$color-primary: #9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$color-grey: rgb(53,53,53);
+$color-grey2: lighten($color-grey, 65%);
+$color-grey3: lighten($color-grey, 75%);
+
+// Fonts=========================================
 @font-face {
     font-family: 'robotoregular';
     src: url('../../fonts/roboto-regular-webfont.woff2') format('woff2'),
@@ -36,36 +53,30 @@
     font-style: normal;
 }
 
-// Fonts=========================================
 $font-logo-title:'shrikhandregular';
 $font-txt:'robotoregular';
 
-h1
-{
+h1 {
     font-family: $font-logo-title;
 }
 
-
-h2, h3, h4, p, li
-{
+h2, h3, h4, h5, p, li, div, a {
     font-family: $font-txt;
-
 }
 
-body{
-    width: 500px;
-    margin:auto;
+a{
+    text-decoration: none;
 }
 
-
-
-// Colors========================================
-$color-primary: #9356DC;
-$color-secondary:#FF79DA;
-$color-tertiary:#99E2D0;
-$color-grey: rgb(53,53,53);
-$color-grey2: lighten($color-grey, 65%);
-$color-grey3: lighten($color-grey, 75%);
+h5{
+    text-transform: uppercase;
+    margin-left: 20px;
+    & .line{
+        margin-top: 2px;
+        width: 35px;
+        border-top: 3px solid $color-tertiary;
+    }
+}
 
 //Media Queries==================================
 $breakpoint:(
@@ -80,31 +91,97 @@ $breakpoint:(
 }
 
 //image==========================================
-$image:(
-    1:"../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash 380 x 253.jpg",
-    2:"../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash380x316.jpg",
-    3:"../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash380x193.jpg",
-    4:"../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash380x260.jpg",
+$image-home:(    
+    1:"../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash 380 x 253.jpg", //The Full Palette
+    2:"../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash380x316.jpg", // The Enchanted Plate
+    3:"../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash380x193.jpg", // Bastille
+    4:"../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash380x260.jpg", // Le Gourmand
 );
 
+$image-menu:(
+1:"../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-menu.jpg", //The Full Palette
+2:"../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-menu.jpg", // The Enchanted Plate
+3:"../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-menu.jpg", // Bastille
+4:"../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-menu.jpg", // Le Gourmand
+);
 
-@mixin url-image($images){
+@mixin url-image-home($images){
     @each $i, $url in $images {
-        &:nth-of-type(#{$i}){
+        & a:nth-of-type(#{$i}) div:first-child {
             background: url(map-get($images, $i)) no-repeat;
         }
     }
 }
-//==============================================
+@mixin url-image-menu($images){
+    @each $i, $url in $images {
+        & #img__prez#{$i} {
+            background: url(map-get($images, $i)) no-repeat;
+            position: relative;
+            height: 380px;
+            width: 100%;
+        }
+    }
+}
 
+//Button ======================================
 $radius:(
     menu: 1rem,
-    propal: 1rem,
+    tag: 1.5rem,
     btn: 10rem
 );
 
+.btn {
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    min-width: 5em;
+    margin:auto;
+    margin-top: 20px;
+    padding: 0.5rem 2rem;
+    border-radius: map-get($radius,btn);
+    text-align:center;
+    color: white;   
+    font-size: 1rem;
+    font-weight: 900;
+    background: linear-gradient($color-secondary, 20%,$color-primary);
+    box-shadow: 0px 4px 4px $color-grey2;
+}
+
+//==============================================
+
+
+
 header{
     text-align: center;
+    position: relative;
+    & i{
+        cursor: pointer;
+        position: absolute;
+        left: 2rem;
+        top:0.8rem;
+        font-size: 1.6rem;
+        color: black;
+    }
+}
+
+main{
+    @include url-image-menu($image-menu);
+    & h1 {
+        position: absolute;
+        width: 96%;
+        bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        background-color: $color-grey3;
+        border-radius: map-get($radius, tag) map-get($radius, tag) 0 0;
+        & i {
+            position: absolute;
+            right:3rem;
+        }
+    }
 }
 
 .localisation{
@@ -129,72 +206,20 @@ header{
     line-height: 3em;
     color: $color-grey;
     & p{
-        word-wrap: break-word;
-    }
-
-}
-article{
-    background-color: $color-grey3;
-}
-main {
-    height: 100%;
-}
-
-.btn {
-    cursor: pointer;
-    display: block;
-    width: fit-content;
-    margin:auto;
-    padding: 0.5rem 2rem;
-    border-radius: map-get($radius,btn);
-    text-align:center;
-    color: white;   
-    font-size: 1rem;
-    font-weight: 900;
-    background: linear-gradient($color-secondary, 20%,$color-primary);
-    box-shadow: 0px 4px 4px $color-grey2;
-}
-
-.restaurant {    
-    cursor: pointer;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 380px;
-    height: 193px;
-    border-radius:  map-get($radius,menu);
-    position: relative;
-    box-shadow: 0px 4px 4px $color-grey;
-    @include url-image($image);
-
-}
-
-.description{
-    position: absolute;
-    bottom: 0;
-    border-radius: 0px 0px 5px 5px;
-    width: 100%;
-    height: 50px;
-    padding-top: 1px;
-    padding-left: 4px;
-    margin-top: 5px;
-    background-color: rgba(255, 255, 255, 0.89);
-    Color:black;
-    font-size: 0.8em;
-    & h3{
-        margin-top: 5px;
-        margin-bottom: 1px;
-    }
-    & p{
-        margin-top: 1px;
-        margin-bottom: 2px;
+        display: inline-block;
+        margin:auto;
+        line-height: 1.2;
+        width: 70%;
+        text-align: center;
+        word-break: break-all;
     }
 }
-
-
 
 aside {
+    & h2{
+        padding-top: 20px;
+        padding-left: 20px;
+    }
     & ol{
         list-style: none;
         counter-reset: li;
@@ -211,6 +236,10 @@ aside {
         }
         & li {
             counter-increment: li;
+            cursor: pointer;
+            // &:hover{
+
+            // }
         }
         & i{
             padding-left: 20px;
@@ -222,7 +251,7 @@ aside {
             color: white;
             display: inline-block;
             text-align: center;
-            width:1em;
+            width:1.5em;
             margin-left:-1em;
             background-color: $color-primary;
             border-radius: 50%;
@@ -230,19 +259,107 @@ aside {
         }
     }
 }
+$img-height: 190px;
 
 article{
+    background-color: $color-grey3;
     width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include url-image-home($image-home);
+    & h2{
+        padding-top: 0px;
+        padding-left: 20px;
+    }
+    & .restaurant{
+        width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+        &__img{    
+            cursor: pointer;
+            position: relative;
+            margin-top: 15px;           
+            height: $img-height;
+            border-radius:  map-get($radius,menu) map-get($radius,menu) 0 0;
+            &--new{
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                width: 90px;
+                height: 30px;
+                text-align: center;
+                line-height: 1.8;
+                color: darken($color-tertiary, 50%);
+                background-color: $color-tertiary;
+                font-weight: bold;;
+            }
+        }
+        &__description{
+            cursor: pointer;
+            position: relative;
+            border-radius: 0 0 map-get($radius,menu) map-get($radius,menu);
+            // height: 55px;
+            padding-top: 1px;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            padding-left: 4px;
+            background-color: white;
+            font-size: 0.8em;
+            box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;            & h3{
+                margin-top: 5px;
+                margin-bottom: 1px;
+                margin-left: 5px;
+                color:$color-grey;
+            }
+            & p{
+                margin-top: 1px;
+                margin-bottom: 2px;
+                margin-left: 5px;
+                color:$color-grey;
+            }
+            & i{
+                cursor: pointer;
+                position: absolute;
+                font-size: 1.7em;
+                color:$color-grey;
+                right: 2rem;
+                top : 0.6em;
+            }
+            &--arrounded{
+                border-radius: map-get($radius, menu);
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;;
+            }
+            & span{
+                position: absolute;
+                right: 4rem;
+                bottom: 1rem;
+            }
+        }
+
+    }
 }
 
 footer{
     background-color: $color-grey;
-    color:white;
+    padding-bottom: 10px;
+    color:white;    
+    & h1{
+        margin-top: 0;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
     & ul{
         list-style: none;
     }
     & i{
-        margin-left: -2em;
-        margin-right: 1em;
+        width: 2em;
+    }
+    & a{
+        color:white;
+        font-style: normal;
     }
 }
+
+//P
