@@ -127,7 +127,8 @@ $image-menu:(
 $radius:(
     menu: 1rem,
     tag: 1.5rem,
-    btn: 10rem
+    btn: 10rem,
+    propal: 1rem
 );
 
 .btn {
@@ -223,6 +224,7 @@ aside {
     & ol{
         list-style: none;
         counter-reset: li;
+        
         & p{
             display: inline-block;
             width: 90%;
@@ -248,11 +250,13 @@ aside {
         }
         & li::before {
             content: counter(li);
+            position: relative;
+            left: 0.6rem;
             color: white;
             display: inline-block;
             text-align: center;
             width:1.5em;
-            margin-left:-1em;
+            // margin-left:-1em;
             background-color: $color-primary;
             border-radius: 50%;
             

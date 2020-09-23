@@ -159,6 +159,7 @@ aside ol p {
   margin-bottom: 15px;
   background-color: #f4f4f4;
   align-content: center;
+  border-radius: 1rem;
   box-shadow: 2px 4px 4px #dbdbdb, -1px -4px 4px #f4f4f4;
 }
 aside ol li {
@@ -172,11 +173,12 @@ aside ol i {
 }
 aside ol li::before {
   content: counter(li);
+  position: relative;
+  left: 0.6rem;
   color: white;
   display: inline-block;
   text-align: center;
   width: 1.5em;
-  margin-left: -1em;
   background-color: #9356DC;
   border-radius: 50%;
 }
