@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 body {
   width: 500px;
   margin: auto;
@@ -7,24 +9,12 @@ main {
   height: 100%;
 }
 
-@font-face {
-  font-family: "robotoregular";
-  src: url("../../fonts/roboto-regular-webfont.woff2") format("woff2"), url("../../fonts/roboto-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "shrikhandregular";
-  src: url("../../fonts/shrikhand-regular-webfont.woff2") format("woff2"), url("../../fonts/shrikhand-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 h1 {
-  font-family: "shrikhandregular";
+  font-family: "Shrikhand", cursive;
 }
 
 h2, h3, h4, h5, p, li, div, a {
-  font-family: "robotoregular";
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -44,18 +34,17 @@ h5 .line {
 .btn {
   cursor: pointer;
   display: block;
-  width: fit-content;
-  min-width: 5em;
-  margin: auto;
+  margin-left: 6rem;
+  margin-right: 6rem;
   margin-top: 20px;
-  padding: 0.5rem 2rem;
+  padding: 1rem;
   border-radius: 10rem;
   text-align: center;
   color: white;
   font-size: 1rem;
   font-weight: 900;
   background: linear-gradient(#FF79DA, 20%, #9356DC);
-  box-shadow: 0px 4px 4px #dbdbdb;
+  box-shadow: 2px 8px 8px #dbdbdb;
 }
 
 header {

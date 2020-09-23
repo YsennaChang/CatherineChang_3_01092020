@@ -38,23 +38,11 @@ $color-grey2: lighten($color-grey, 65%);
 $color-grey3: lighten($color-grey, 75%);
 
 // Fonts=========================================
-@font-face {
-    font-family: 'robotoregular';
-    src: url('../../fonts/roboto-regular-webfont.woff2') format('woff2'),
-         url('../../fonts/roboto-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'shrikhandregular';
-    src: url('../../fonts/shrikhand-regular-webfont.woff2') format('woff2'),
-         url('../../fonts/shrikhand-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
-$font-logo-title:'shrikhandregular';
-$font-txt:'robotoregular';
+$font-logo-title:'Shrikhand', cursive;
+$font-txt:'Roboto', sans-serif;
 
 h1 {
     font-family: $font-logo-title;
@@ -92,17 +80,17 @@ $breakpoint:(
 
 //image==========================================
 $image-home:(    
-    1:"../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash 380 x 253.jpg", //The Full Palette
-    2:"../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash380x316.jpg", // The Enchanted Plate
-    3:"../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash380x193.jpg", // Bastille
-    4:"../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash380x260.jpg", // Le Gourmand
+    1:"../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash 380 x 253.jpg", //La palette du goût
+    2:"../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash380x316.jpg", // La note enchantée
+    3:"../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash380x193.jpg", // A la française
+    4:"../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash380x260.jpg", // Le délice des sens
 );
 
 $image-menu:(
-1:"../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-menu.jpg", //The Full Palette
-2:"../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-menu.jpg", // The Enchanted Plate
-3:"../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-menu.jpg", // Bastille
-4:"../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-menu.jpg", // Le Gourmand
+    1:"../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-menu.jpg", //La palette du goût
+    2:"../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-menu.jpg", // La note enchantée
+    3:"../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-menu.jpg", // A la française
+    4:"../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-menu.jpg", // Le délice des sens
 );
 
 @mixin url-image-home($images){
@@ -134,18 +122,17 @@ $radius:(
 .btn {
     cursor: pointer;
     display: block;
-    width: fit-content;
-    min-width: 5em;
-    margin:auto;
+    margin-left:6rem;
+    margin-right: 6rem;
     margin-top: 20px;
-    padding: 0.5rem 2rem;
+    padding: 1rem;
     border-radius: map-get($radius,btn);
     text-align:center;
     color: white;   
     font-size: 1rem;
     font-weight: 900;
     background: linear-gradient($color-secondary, 20%,$color-primary);
-    box-shadow: 0px 4px 4px $color-grey2;
+    box-shadow: 2px 8px 8px $color-grey2;
 }
 
 //==============================================
@@ -256,10 +243,8 @@ aside {
             display: inline-block;
             text-align: center;
             width:1.5em;
-            // margin-left:-1em;
             background-color: $color-primary;
-            border-radius: 50%;
-            
+            border-radius: 50%;            
         }
     }
 }
@@ -302,14 +287,14 @@ article{
             cursor: pointer;
             position: relative;
             border-radius: 0 0 map-get($radius,menu) map-get($radius,menu);
-            // height: 55px;
             padding-top: 1px;
             padding-bottom: 5px;
             margin-bottom: 10px;
             padding-left: 4px;
             background-color: white;
             font-size: 0.8em;
-            box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;            & h3{
+            box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;
+            & h3{
                 margin-top: 5px;
                 margin-bottom: 1px;
                 margin-left: 5px;
@@ -365,5 +350,3 @@ footer{
         font-style: normal;
     }
 }
-
-//P
