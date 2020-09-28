@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 body {
-  width: 500px;
+  width: 90%;
+  min-width: 500px;
   margin: auto;
 }
 
@@ -24,6 +25,8 @@ a {
 h5 {
   text-transform: uppercase;
   margin-left: 20px;
+  font-size: 1.2rem;
+  font-weight: normal;
 }
 h5 .line {
   margin-top: 2px;
@@ -34,10 +37,11 @@ h5 .line {
 .btn {
   cursor: pointer;
   display: block;
-  margin-left: 6rem;
-  margin-right: 6rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
   margin-top: 20px;
-  padding: 1rem;
+  padding: 0.3rem;
+  line-height: 3em;
   border-radius: 10rem;
   text-align: center;
   color: white;
@@ -47,11 +51,20 @@ h5 .line {
   box-shadow: 2px 8px 8px #dbdbdb;
 }
 
+@media all and (min-width: 768px) {
+  .header {
+    display: flex;
+  }
+  .header h1 {
+    margin-left: 3rem;
+  }
+}
+
 header {
   text-align: center;
   position: relative;
 }
-header i {
+header .fa-arrow-left {
   cursor: pointer;
   position: absolute;
   left: 2rem;
@@ -59,49 +72,7 @@ header i {
   font-size: 1.6rem;
   color: black;
 }
-
-main #img__prez1 {
-  background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-menu.jpg") no-repeat;
-  position: relative;
-  height: 380px;
-  width: 100%;
-}
-main #img__prez2 {
-  background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-menu.jpg") no-repeat;
-  position: relative;
-  height: 380px;
-  width: 100%;
-}
-main #img__prez3 {
-  background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-menu.jpg") no-repeat;
-  position: relative;
-  height: 380px;
-  width: 100%;
-}
-main #img__prez4 {
-  background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-menu.jpg") no-repeat;
-  position: relative;
-  height: 380px;
-  width: 100%;
-}
-main h1 {
-  position: absolute;
-  width: 96%;
-  bottom: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  background-color: #f4f4f4;
-  border-radius: 1.5rem 1.5rem 0 0;
-}
-main h1 i {
-  position: absolute;
-  right: 3rem;
-}
-
-.localisation {
+header .localisation {
   background-color: #dbdbdb;
   text-align: center;
   padding-top: 3px;
@@ -110,9 +81,83 @@ main h1 i {
   margin-bottom: 0%;
   box-shadow: inset 0 2px 4px -3px #353535;
 }
-.localisation i {
+@media all and (min-width: 768px) {
+  header .localisation {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 6rem;
+    height: 2rem;
+    width: 20rem;
+  }
+  header .localisation p {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 0.4rem;
+  }
+}
+header .localisation i {
   padding-left: 20px;
   padding-right: 20px;
+}
+@media all and (min-width: 768px) {
+  header .localisation i {
+    padding-left: 0;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+main #img__prez1 {
+  background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-menu.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 30rem;
+}
+main #img__prez2 {
+  background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-menu.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 30rem;
+}
+main #img__prez3 {
+  background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-menu.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 30rem;
+}
+main #img__prez4 {
+  background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-menu.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 30rem;
+}
+main h1 {
+  position: absolute;
+  bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 45px;
+  padding-left: 20px;
+  padding-bottom: 0px;
+  width: 100%;
+  background-color: #f4f4f4;
+  border-radius: 4rem 4rem 0 0;
+}
+main h1 i {
+  position: absolute;
+  right: 3rem;
+  font-weight: normal;
+}
+main h1 i:hover {
+  font-weight: bold;
 }
 
 .introduction {
@@ -123,18 +168,38 @@ main h1 i {
   line-height: 3em;
   color: #353535;
 }
+@media all and (min-width: 768px) {
+  .introduction {
+    flex: 1 auto;
+    order: 1;
+  }
+}
 .introduction p {
   display: inline-block;
   margin: auto;
   line-height: 1.2;
   width: 70%;
   text-align: center;
-  word-break: break-all;
+  overflow: auto;
 }
 
+@media all and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+@media all and (min-width: 768px) {
+  aside {
+    flex: 1 auto;
+    order: 2;
+  }
+}
 aside h2 {
   padding-top: 20px;
-  padding-left: 20px;
+  padding-left: 50px;
 }
 aside ol {
   list-style: none;
@@ -147,16 +212,17 @@ aside ol p {
   margin-top: 15px;
   margin-bottom: 15px;
   background-color: #f4f4f4;
+  font-weight: bold;
   align-content: center;
   border-radius: 1rem;
-  box-shadow: 2px 4px 4px #dbdbdb, -1px -4px 4px #f4f4f4;
+  box-shadow: 0.5rem 0.5rem 0.6rem #dbdbdb, -1px -4px 4px #f4f4f4;
 }
 aside ol li {
   counter-increment: li;
   cursor: pointer;
 }
 aside ol i {
-  padding-left: 20px;
+  padding-left: 30px;
   padding-right: 20px;
   color: #353535;
 }
@@ -167,7 +233,8 @@ aside ol li::before {
   color: white;
   display: inline-block;
   text-align: center;
-  width: 1.5em;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.4rem;
   background-color: #9356DC;
   border-radius: 50%;
 }
@@ -176,23 +243,32 @@ article {
   background-color: #f4f4f4;
   width: 100%;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 55px;
+}
+@media all and (min-width: 768px) {
+  article {
+    order: 3;
+  }
 }
 article a:nth-of-type(1) div:first-child {
   background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash 380 x 253.jpg") no-repeat;
+  max-width: 100%;
 }
 article a:nth-of-type(2) div:first-child {
   background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash380x316.jpg") no-repeat;
+  max-width: 100%;
 }
 article a:nth-of-type(3) div:first-child {
   background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash380x193.jpg") no-repeat;
+  max-width: 100%;
 }
 article a:nth-of-type(4) div:first-child {
   background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash380x260.jpg") no-repeat;
+  max-width: 100%;
 }
 article h2 {
   padding-top: 0px;
-  padding-left: 20px;
+  padding-left: 60px;
 }
 article .restaurant {
   width: 380px;
@@ -203,7 +279,7 @@ article .restaurant__img {
   cursor: pointer;
   position: relative;
   margin-top: 15px;
-  height: 190px;
+  height: 180px;
   border-radius: 1rem 1rem 0 0;
 }
 article .restaurant__img--new {
@@ -214,18 +290,19 @@ article .restaurant__img--new {
   height: 30px;
   text-align: center;
   line-height: 1.8;
-  color: #1b6150;
+  color: #2c9c81;
   background-color: #99E2D0;
   font-weight: bold;
+  border-radius: 2px;
 }
 article .restaurant__description {
   cursor: pointer;
   position: relative;
   border-radius: 0 0 1rem 1rem;
-  padding-top: 1px;
-  padding-bottom: 5px;
+  padding-top: 0.6rem;
+  padding-bottom: 1rem;
   margin-bottom: 10px;
-  padding-left: 4px;
+  padding-left: 7px;
   background-color: white;
   font-size: 0.8em;
   box-shadow: 2px 5px 5px #dbdbdb, -2px 0 5px #dbdbdb;
@@ -235,6 +312,7 @@ article .restaurant__description h3 {
   margin-bottom: 1px;
   margin-left: 5px;
   color: #353535;
+  font-weight: bold;
 }
 article .restaurant__description p {
   margin-top: 1px;
@@ -245,10 +323,14 @@ article .restaurant__description p {
 article .restaurant__description i {
   cursor: pointer;
   position: absolute;
-  font-size: 1.7em;
+  font-size: 1.2rem;
+  font-weight: lighter;
   color: #353535;
   right: 2rem;
-  top: 0.6em;
+  top: 0.7em;
+}
+article .restaurant__description i:hover {
+  font-weight: bold;
 }
 article .restaurant__description--arrounded {
   border-radius: 1rem;
@@ -256,21 +338,28 @@ article .restaurant__description--arrounded {
   margin-left: auto;
   margin-right: auto;
 }
+@media all and (min-width: 768px) {
+  article .restaurant__description--arrounded {
+    width: 20rem;
+  }
+}
 article .restaurant__description span {
   position: absolute;
   right: 4rem;
   bottom: 1rem;
+  font-weight: bold;
 }
 
 footer {
   background-color: #353535;
   padding-bottom: 10px;
+  font-size: 0.6rem;
   color: white;
 }
 footer h1 {
   margin-top: 0;
   padding-top: 20px;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 footer ul {
   list-style: none;
