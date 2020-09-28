@@ -213,8 +213,6 @@ header{
     }
 }
 main{
-    // width: 100%;
-
     @include url-image-menu($image-menu);
         & h1 {
         position: absolute;
@@ -235,6 +233,7 @@ main{
             font-weight: normal;
             &:hover{
                 font-weight: bold;
+                color: $color-primary;
             }
         }
     }
@@ -251,7 +250,6 @@ main{
     @include tablet{
         flex: 1 auto;
         order:1 ;
-
     }
     & p{
         display: inline-block;
@@ -387,7 +385,7 @@ article{
                 margin-left: 5px;
                 color:$color-grey;
             }
-            & i{
+            & .fa-heart{
                 cursor: pointer;
                 position: absolute;
                 font-size: 1.2rem;
@@ -398,7 +396,21 @@ article{
                 top : 0.7em;
                 &:hover{
                     font-weight: bold;
+                    color: $color-primary;
                 }
+            }
+            & .fa-check-circle{
+                cursor: pointer;
+                position: absolute;
+                font-size: 1.2rem;
+                font-weight: lighter;
+                color:$color-grey;
+                right: 2rem;
+                top : 0.7em;
+                color: $color-tertiary;
+                // &:hover{
+
+                // }
             }
             &--arrounded{
                 border-radius: map-get($radius, menu);

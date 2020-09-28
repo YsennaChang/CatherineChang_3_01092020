@@ -158,6 +158,7 @@ main h1 i {
 }
 main h1 i:hover {
   font-weight: bold;
+  color: #9356DC;
 }
 
 .introduction {
@@ -320,7 +321,7 @@ article .restaurant__description p {
   margin-left: 5px;
   color: #353535;
 }
-article .restaurant__description i {
+article .restaurant__description .fa-heart {
   cursor: pointer;
   position: absolute;
   font-size: 1.2rem;
@@ -329,8 +330,19 @@ article .restaurant__description i {
   right: 2rem;
   top: 0.7em;
 }
-article .restaurant__description i:hover {
+article .restaurant__description .fa-heart:hover {
   font-weight: bold;
+  color: #9356DC;
+}
+article .restaurant__description .fa-check-circle {
+  cursor: pointer;
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  color: #353535;
+  right: 2rem;
+  top: 0.7em;
+  color: #99E2D0;
 }
 article .restaurant__description--arrounded {
   border-radius: 1rem;
