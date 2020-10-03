@@ -214,6 +214,66 @@ main #img__prez4 {
   position: relative;
   height: 30rem;
 }
+@media all and (min-width: 768px) {
+  main #img__prez1 {
+    background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-800x533.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+  main #img__prez2 {
+    background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-800x1000.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+  main #img__prez3 {
+    background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-800x533.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+  main #img__prez4 {
+    background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-800x548.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+}
+@media all and (min-width: 1199px) {
+  main #img__prez1 {
+    background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-1200x800.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+  main #img__prez2 {
+    background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-1200x1500.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+  main #img__prez3 {
+    background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-1200x800.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+  main #img__prez4 {
+    background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-1200x822.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+}
 main h1 {
   position: absolute;
   bottom: 0;

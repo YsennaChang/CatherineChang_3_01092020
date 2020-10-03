@@ -47,6 +47,12 @@ main {
 
 main {
     @include url-image-menu($image-menu);
+    @include tablet{
+        @include url-image-menu($image-menu-tablet);
+    }
+    @include desktop{
+        @include url-image-menu($image-menu-desktop);
+    }
         & h1 {
         position: absolute;
         bottom: 0;

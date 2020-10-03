@@ -26,8 +26,18 @@ $image-menu:(
     3:"../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-menu.jpg", // A la française
     4:"../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-menu.jpg", // Le délice des sens
 );
-
-
+$image-menu-tablet:(
+    1:"../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-800x533.jpg", //La palette du goût
+    2:"../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-800x1000.jpg", // La note enchantée
+    3:"../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-800x533.jpg", // A la française
+    4:"../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-800x548.jpg", // Le délice des sens
+);
+$image-menu-desktop:(
+    1:"../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-1200x800.jpg", //La palette du goût
+    2:"../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-1200x1500.jpg", // La note enchantée
+    3:"../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-1200x800.jpg", // A la française
+    4:"../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-1200x822.jpg", // Le délice des sens
+);
 $radius:(
     menu: 1rem,
     tag: 4rem,

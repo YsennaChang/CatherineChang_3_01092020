@@ -9,7 +9,6 @@
         @content;
     };
 }
-
 //image==========================================
 @mixin url-image-home($images) {
     @each $i, $url in $images {
