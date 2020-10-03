@@ -21,7 +21,7 @@
 // }
 
 
-body{
+body {
     width: 90%;
     min-width: 500px;
     margin:auto;
@@ -35,6 +35,7 @@ main {
 //==============================================
 
 
+
 .main {
     @include tablet{
         display: grid;
@@ -44,7 +45,7 @@ main {
     }
 }
 
-main{
+main {
     @include url-image-menu($image-menu);
         & h1 {
         position: absolute;
@@ -60,7 +61,7 @@ main{
         box-sizing: border-box;
         background-color: $color-grey3;
         border-radius: map-get($radius, tag) map-get($radius, tag) 0 0;
-        & svg{
+        & svg {
             position: absolute;
             right: 3rem;
             bottom: 0.5rem;
@@ -69,7 +70,7 @@ main{
             width:1.6rem;
             height: auto;
             z-index:1;
-            &:hover{
+            &:hover {
                 fill: url(#gradient);
                 stroke: url(#gradient);
                 // opacity: 1;
@@ -93,20 +94,20 @@ main{
 }
 
 
-.introduction{
+.introduction {
     background-color: $color-grey3;
     text-align: center;
     padding-top: 3em;
     padding-bottom: 3em;
     line-height: 3em;
     color: $color-grey;
-    @include tablet{
+    @include tablet {
         grid-column-start: 2;
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 2;
     }
-    & p{
+    & p {
         display: inline-block;
         margin:auto;
         line-height: 1.2;
@@ -117,22 +118,22 @@ main{
 }
 
 aside {
-    @include tablet{
+    @include tablet {
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
 
     }
-    & h2{
+    & h2 {
         padding-top: 20px;
         padding-left: 50px;
     }
-    & ol{
+    & ol {
         list-style: none;
         counter-reset: li;
         
-        & p{
+        & p {
             display: inline-block;
             width: 90%;
             padding-top: 20px;
@@ -144,7 +145,7 @@ aside {
             align-content: center;
             border-radius: map-get($radius, propal);
             box-shadow: 0.5rem 0.5rem 0.6rem $color-grey2, -1px -4px 4px $color-grey3;
-            &:hover{
+            &:hover {
                 background-color: darken($color-grey3, 5%);
                 box-shadow: 0.5rem 0.5rem 0.4rem $color-grey2, -1px -4px 2px $color-grey3;
             }
@@ -155,7 +156,7 @@ aside {
             min-width: 300px;
 
         }
-        & i{
+        & i {
             padding-left: 30px;
             padding-right: 20px;
             color: $color-grey;
@@ -175,42 +176,40 @@ aside {
     }
 }
 
-.main-stop{
+.main-stop {
     stop-color: $color-primary;
 }
-.alt-stop{
+.alt-stop {
     stop-color: $color-secondary;
 }
 
-article{
+article {
     background-color: $color-grey3;
     width: 100%;
     padding-top: 30px;
     padding-bottom: 55px;
-    @include tablet{
+    @include tablet {
         grid-column-start: 2;
         grid-column-end: 4;
         grid-row-start: 2;
         grid-row-end: 4;
     }
     @include url-image-home($image-home);
-    & h2{
+    & h2 {
         padding-top: 0px;
         padding-left: 60px;
     }
-    & .restaurant{
+    & .restaurant {
         width: 380px;
         margin-left: auto;
         margin-right: auto;
-
-        &__img{    
+        &__img {    
             cursor: pointer;
             position: relative;
             margin-top: 15px;
             height: 180px;
             border-radius:  map-get($radius,menu) map-get($radius,menu) 0 0;
-
-            &--new{
+            &--new {
                 position: absolute;
                 right: 10px;
                 top: 10px;
@@ -224,7 +223,7 @@ article{
                 border-radius: 2px;
             }
         }
-        &__description{
+        &__description {
             cursor: pointer;
             position: relative;
             border-radius: 0 0 map-get($radius,menu) map-get($radius,menu);
@@ -238,22 +237,22 @@ article{
             display: flex;
             align-items: stretch;
             overflow: hidden;
-            &:hover{
-                & .check-box{
+            &:hover {
+                & .check-box {
                     transform: translateX(5px);
                     & .fa-check-circle{
                         transform: rotate(360deg);
                     }
                 }
-                & .title-subtitle-price{
+                & .title-subtitle-price {
                     width: 75%;
                 }
 
             }
-            .title-subtitle-price{
+            .title-subtitle-price {
                 width: 100%;
                 transition: width 0.2s;
-                & h3{
+                & h3 {
                     margin-top: 5px;
                     margin-bottom: 1px;
                     margin-left: 5px;
@@ -263,10 +262,10 @@ article{
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
-                & .subtitle{
+                & .subtitle {
                     display: flex;
                     justify-content: space-between;
-                    & p{
+                    & p {
                         margin-top: 1px;
                         margin-bottom: 2px;
                         margin-left: 5px;
@@ -275,7 +274,7 @@ article{
                         overflow: hidden;
                         text-overflow: ellipsis;
                     }
-                    & span{
+                    & span {
                         padding-right: 1rem;
                         padding-left: 0.5rem;
                         font-weight: bold;
@@ -292,12 +291,12 @@ article{
                 top : 0.7em;
                 stroke: $color-grey;
                 flex-grow: 0;
-                &:hover{
+                &:hover {
                     fill: url(#gradient);
                     stroke: url(#gradient);
                 }
             }
-            & .check-box{
+            & .check-box {
                 position: absolute;
                 right: 0;
                 top:0;
@@ -306,7 +305,7 @@ article{
                 background-color: $color-tertiary;
                 transform: translateX(90px);
                 transition: transform 0.2s;
-                & .fa-check-circle{
+                & .fa-check-circle {
                     cursor: pointer;
                     position: absolute;
                     right: 2rem;
@@ -319,12 +318,12 @@ article{
                 }
             }
 
-            &--arrounded{
+            &--arrounded {
                 border-radius: map-get($radius, menu);
                 width: 90%;
                 margin-left: auto;
                 margin-right: auto;
-                @include tablet{
+                @include tablet {
                     width: 20rem;
                 }
             }

@@ -1,17 +1,17 @@
 //Media Queries==================================
-@mixin tablet{
+@mixin tablet {
     @media all and (min-width: map-get($breakpoint, tablet)){
         @content;
     };
 }
-@mixin desktop{
+@mixin desktop {
     @media all and (min-width: map-get($breakpoint, desktop)){
         @content;
     };
 }
 
 //image==========================================
-@mixin url-image-home($images){
+@mixin url-image-home($images) {
     @each $i, $url in $images {
         & a:nth-of-type(#{$i}) div:first-child {
             background: url(map-get($images, $i)) no-repeat;
@@ -19,7 +19,7 @@
         }
     }
 }
-@mixin url-image-menu($images){
+@mixin url-image-menu($images) {
     @each $i, $url in $images {
         & #img__prez#{$i} {
             background: url(map-get($images, $i)) no-repeat;
@@ -27,6 +27,36 @@
             background-position: center;
             position: relative;
             height: 30rem;
+        }
+    }
+}
+
+// animations=====================================
+$number-of-receipe: 4+1;//Need to be adjusted in function of the maximum of number of receipe there is in the menus +1.
+$number-of-restaurant: 4+1;//Need to be adjusted in function of the number of restaurants represented +1.
+$anim-delay: 0.3s;
+
+@keyframes menu {
+    0% {
+        transform: translateY(30%);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity:100%;
+    }
+}
+.menu {
+    @for $i from 1 to $number-of-receipe {
+        &>div:nth-of-type(#{$i}){
+            animation: menu 2s 1s+$anim-delay*$i both;
+        }
+    }
+}
+.container {
+    @for $i from 1 to $number-of-restaurant {
+        &>a:nth-of-type(#{$i}) {
+            animation: menu 2s 1s+$anim-delay*$i both;
         }
     }
 }
