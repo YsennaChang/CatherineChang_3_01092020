@@ -1,0 +1,36 @@
+// Colors========================================
+$color-primary: #9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$color-grey: rgb(53,53,53);
+$color-grey2: lighten($color-grey, 65%);
+$color-grey3: lighten($color-grey, 75%);
+
+//Media Queries==================================
+$breakpoint:(
+    tablet: 768px,
+    desktop: 1199px
+);
+
+//image==========================================
+$image-home:(    
+    1:"../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash 380 x 253.jpg", //La palette du goût
+    2:"../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash380x316.jpg", // La note enchantée
+    3:"../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash380x193.jpg", // A la française
+    4:"../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash380x260.jpg", // Le délice des sens
+);
+
+$image-menu:(
+    1:"../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-menu.jpg", //La palette du goût
+    2:"../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-menu.jpg", // La note enchantée
+    3:"../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-menu.jpg", // A la française
+    4:"../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-menu.jpg", // Le délice des sens
+);
+
+
+$radius:(
+    menu: 1rem,
+    tag: 4rem,
+    btn: 10rem,
+    propal: 1rem
+);

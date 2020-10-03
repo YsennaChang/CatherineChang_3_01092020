@@ -20,6 +20,7 @@
 //     border: 1px solid black;
 // }
 
+
 body{
     width: 90%;
     min-width: 500px;
@@ -31,187 +32,18 @@ main {
     height: 100%;
 }
 
-// Colors========================================
-$color-primary: #9356DC;
-$color-secondary:#FF79DA;
-$color-tertiary:#99E2D0;
-$color-grey: rgb(53,53,53);
-$color-grey2: lighten($color-grey, 65%);
-$color-grey3: lighten($color-grey, 75%);
-
-// Fonts=========================================
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-
-$font-logo-title:'Shrikhand', cursive;
-$font-txt:'Roboto', sans-serif;
-
-h1 {
-    font-family: $font-logo-title;
-}
-
-h2, h3, h4, h5, p, li, div, a {
-    font-family: $font-txt;
-}
-
-a{
-    text-decoration: none;
-}
-
-h5{
-    text-transform: uppercase;
-    margin-left: 20px;
-    font-size: 1.2rem;
-    font-weight: normal;
-    & .line{
-        margin-top: 2px;
-        width: 35px;
-        border-top: 3px solid $color-tertiary;
-    }
-}
-
-//Media Queries==================================
-$breakpoint:(
-    tablet: 768px,
-    desktop: 1199px
-);
-
-@mixin tablet{
-    @media all and (min-width: map-get($breakpoint, tablet)){
-        @content;
-    };
-}
-@mixin desktop{
-    @media all and (min-width: map-get($breakpoint, desktop)){
-        @content;
-    };
-}
-
-
-//image==========================================
-$image-home:(    
-    1:"../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash 380 x 253.jpg", //La palette du goût
-    2:"../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash380x316.jpg", // La note enchantée
-    3:"../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash380x193.jpg", // A la française
-    4:"../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash380x260.jpg", // Le délice des sens
-);
-
-$image-menu:(
-    1:"../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-menu.jpg", //La palette du goût
-    2:"../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-menu.jpg", // La note enchantée
-    3:"../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-menu.jpg", // A la française
-    4:"../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-menu.jpg", // Le délice des sens
-);
-
-@mixin url-image-home($images){
-    @each $i, $url in $images {
-        & a:nth-of-type(#{$i}) div:first-child {
-            background: url(map-get($images, $i)) no-repeat;
-            max-width: 100%;
-        }
-    }
-}
-@mixin url-image-menu($images){
-    @each $i, $url in $images {
-        & #img__prez#{$i} {
-            background: url(map-get($images, $i)) no-repeat;
-            background-size: cover;
-            position: relative;
-            height: 30rem;
-        }
-    }
-}
-
-//Button ======================================
-$radius:(
-    menu: 1rem,
-    tag: 4rem,
-    btn: 10rem,
-    propal: 1rem
-);
-
-.btn {
-    cursor: pointer;
-    display: block;
-    margin-left:8rem;
-    margin-right: 8rem;
-    margin-top: 20px;
-    padding: 0.3rem;
-    line-height: 3em;
-    border-radius: map-get($radius,btn);
-    text-align:center;
-    color: white;   
-    font-size: 1rem;
-    font-weight: 900;
-    background: linear-gradient($color-secondary, 20%,$color-primary);
-    box-shadow: 2px 8px 8px $color-grey2;
-}
-
 //==============================================
 
-.header{
-    @include tablet{
-        display: flex;
-        h1{
-            margin-left: 3rem;
-        }
-    }
-}
-
-header{
-    text-align: center;
-    position: relative;
-
-    & .fa-arrow-left{
-        cursor: pointer;
-        position: absolute;
-        left: 2rem;
-        top:0.8rem;
-        font-size: 1.6rem;
-        color: black;
-    }
-    
-    & .localisation{
-        background-color: $color-grey2;
-        text-align: center;
-        padding-top: 3px;
-        padding-bottom: 3px;
-        margin-top: 0%;
-        margin-bottom: 0%;
-        box-shadow: inset 0 2px 4px -3px $color-grey;
-        @include tablet{
-            margin-top: auto;
-            margin-bottom: auto;
-            margin-left: 6rem;
-            height: 2rem;
-            width: 20rem;
-                
-            p{
-                margin-top: auto;
-                margin-bottom: auto;
-                padding-top: 0.4rem;
-            }
-        }
-
-        & i{
-            padding-left: 20px;
-            padding-right: 20px;
-            @include tablet{
-                padding-left: 0;
-            }
-        }
-
-
-    }
-}
 
 .main {
     @include tablet{
-        display: flex;
+        display: grid;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
     }
 }
+
 main{
     @include url-image-menu($image-menu);
         & h1 {
@@ -225,16 +57,37 @@ main{
         padding-left: 20px;
         padding-bottom: 0px;
         width: 100%;
+        box-sizing: border-box;
         background-color: $color-grey3;
         border-radius: map-get($radius, tag) map-get($radius, tag) 0 0;
-        & i {
+        & svg{
             position: absolute;
             right: 3rem;
+            bottom: 0.5rem;
             font-weight: normal;
+            stroke: black;
+            width:1.6rem;
+            height: auto;
+            z-index:1;
             &:hover{
-                font-weight: bold;
-                color: $color-primary;
-            }
+                fill: url(#gradient);
+                stroke: url(#gradient);
+                // opacity: 1;
+                }
+            // }
+            // &::after{
+            //     content:"";
+            //     position: relative;
+            //     top:0;
+            //     right: 0;
+            //     bottom:0;
+            //     left:0;
+            //     fill: url(#gradient);
+            //     stroke: url(#gradient);
+            //     opacity: 0;
+            //     z-index:-1;
+            //     transition: opacity 250ms;
+            // }
         }
     }
 }
@@ -248,8 +101,10 @@ main{
     line-height: 3em;
     color: $color-grey;
     @include tablet{
-        flex: 1 auto;
-        order:1 ;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
     }
     & p{
         display: inline-block;
@@ -260,17 +115,13 @@ main{
         overflow: auto ;
     }
 }
-.container{
-    @include tablet{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-}
+
 aside {
     @include tablet{
-        flex: 1 auto;
-        order:2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
 
     }
     & h2{
@@ -284,7 +135,8 @@ aside {
         & p{
             display: inline-block;
             width: 90%;
-            line-height: 4;
+            padding-top: 20px;
+            padding-bottom:20px;
             margin-top: 15px;
             margin-bottom: 15px;    
             background-color: $color-grey3;
@@ -292,13 +144,16 @@ aside {
             align-content: center;
             border-radius: map-get($radius, propal);
             box-shadow: 0.5rem 0.5rem 0.6rem $color-grey2, -1px -4px 4px $color-grey3;
+            &:hover{
+                background-color: darken($color-grey3, 5%);
+                box-shadow: 0.5rem 0.5rem 0.4rem $color-grey2, -1px -4px 2px $color-grey3;
+            }
         }
         & li {
             counter-increment: li;
             cursor: pointer;
-            // &:hover{
+            min-width: 300px;
 
-            // }
         }
         & i{
             padding-left: 30px;
@@ -320,15 +175,23 @@ aside {
     }
 }
 
+.main-stop{
+    stop-color: $color-primary;
+}
+.alt-stop{
+    stop-color: $color-secondary;
+}
 
 article{
     background-color: $color-grey3;
     width: 100%;
     padding-top: 30px;
     padding-bottom: 55px;
-    
     @include tablet{
-        order: 3;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
     }
     @include url-image-home($image-home);
     & h2{
@@ -372,46 +235,90 @@ article{
             background-color: white;
             font-size: 0.8em;
             box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;
-            & h3{
-                margin-top: 5px;
-                margin-bottom: 1px;
-                margin-left: 5px;
-                color:$color-grey;
-                font-weight: bold;
+            display: flex;
+            align-items: stretch;
+            overflow: hidden;
+            &:hover{
+                & .check-box{
+                    transform: translateX(5px);
+                    & .fa-check-circle{
+                        transform: rotate(360deg);
+                    }
+                }
+                & .title-subtitle-price{
+                    width: 75%;
+                }
+
             }
-            & p{
-                margin-top: 1px;
-                margin-bottom: 2px;
-                margin-left: 5px;
-                color:$color-grey;
-            }
-            & .fa-heart{
-                cursor: pointer;
-                position: absolute;
-                font-size: 1.2rem;
-                font-weight: lighter;
-                // border: 1px solid $color-grey;
-                color:$color-grey;
-                right: 2rem;
-                top : 0.7em;
-                &:hover{
+            .title-subtitle-price{
+                width: 100%;
+                transition: width 0.2s;
+                & h3{
+                    margin-top: 5px;
+                    margin-bottom: 1px;
+                    margin-left: 5px;
+                    color:$color-grey;
                     font-weight: bold;
-                    color: $color-primary;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                & .subtitle{
+                    display: flex;
+                    justify-content: space-between;
+                    & p{
+                        margin-top: 1px;
+                        margin-bottom: 2px;
+                        margin-left: 5px;
+                        color:$color-grey;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    & span{
+                        padding-right: 1rem;
+                        padding-left: 0.5rem;
+                        font-weight: bold;
+                    }
                 }
             }
-            & .fa-check-circle{
+            & svg {
                 cursor: pointer;
                 position: absolute;
-                font-size: 1.2rem;
-                font-weight: lighter;
-                color:$color-grey;
+                font-size: 1.5rem;
+                width:1.5rem;
+                height: auto;
                 right: 2rem;
                 top : 0.7em;
-                color: $color-tertiary;
-                // &:hover{
-
-                // }
+                stroke: $color-grey;
+                flex-grow: 0;
+                &:hover{
+                    fill: url(#gradient);
+                    stroke: url(#gradient);
+                }
             }
+            & .check-box{
+                position: absolute;
+                right: 0;
+                top:0;
+                height: 100%;
+                width: 85px;
+                background-color: $color-tertiary;
+                transform: translateX(90px);
+                transition: transform 0.2s;
+                & .fa-check-circle{
+                    cursor: pointer;
+                    position: absolute;
+                    right: 2rem;
+                    top:50%;
+                    margin-top: -0.8rem; //half the size of the element
+                    font-size: 1.6rem;
+                    color: white;
+                    transform: rotate(0);
+                    transition: transform 0.5s ;
+                }
+            }
+
             &--arrounded{
                 border-radius: map-get($radius, menu);
                 width: 90%;
@@ -421,36 +328,9 @@ article{
                     width: 20rem;
                 }
             }
-            & span{
-                position: absolute;
-                right: 4rem;
-                bottom: 1rem;
-                font-weight: bold;
-            }
+
         }
 
     }
 }
 
-footer{
-    background-color: $color-grey;
-    padding-bottom: 10px;
-    font-size: 0.6rem;
-
-    color:white;    
-    & h1{
-        margin-top: 0;
-        padding-top: 20px;
-        padding-left: 40px;
-    }
-    & ul{
-        list-style: none;
-    }
-    & i{
-        width: 2em;
-    }
-    & a{
-        color:white;
-        font-style: normal;
-    }
-}

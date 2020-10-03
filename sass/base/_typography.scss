@@ -1,0 +1,31 @@
+// Fonts=========================================
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+
+$font-logo-title:'Shrikhand', cursive;
+$font-txt:'Roboto', sans-serif;
+
+h1 {
+    font-family: $font-logo-title;
+}
+
+h2, h3, h4, h5, p, li, div, a {
+    font-family: $font-txt;
+}
+
+a{
+    text-decoration: none;
+}
+
+h5{
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    & .line{
+        margin-top: 2px;
+        width: 35px;
+        border-top: 3px solid $color-tertiary;
+    }
+}

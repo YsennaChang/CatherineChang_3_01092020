@@ -1,0 +1,20 @@
+//Button ======================================
+.btn {
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    max-width: 15rem;
+    margin-top: 20px;
+    padding: 0.3rem;
+    line-height: 3em;
+    border-radius: map-get($radius,btn);
+    text-align:center;
+    color: white;   
+    font-size: 1rem;
+    font-weight: 900;
+    background: linear-gradient(to top left, $color-secondary 20%,$color-primary);
+    box-shadow: 2px 8px 8px $color-grey2;
+    &:hover{
+        background: linear-gradient(to top left, $color-secondary 30%, $color-primary);
+    }
+}

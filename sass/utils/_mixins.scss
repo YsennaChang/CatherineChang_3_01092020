@@ -1,0 +1,32 @@
+//Media Queries==================================
+@mixin tablet{
+    @media all and (min-width: map-get($breakpoint, tablet)){
+        @content;
+    };
+}
+@mixin desktop{
+    @media all and (min-width: map-get($breakpoint, desktop)){
+        @content;
+    };
+}
+
+//image==========================================
+@mixin url-image-home($images){
+    @each $i, $url in $images {
+        & a:nth-of-type(#{$i}) div:first-child {
+            background: url(map-get($images, $i)) no-repeat;
+            max-width: 100%;
+        }
+    }
+}
+@mixin url-image-menu($images){
+    @each $i, $url in $images {
+        & #img__prez#{$i} {
+            background: url(map-get($images, $i)) no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 30rem;
+        }
+    }
+}

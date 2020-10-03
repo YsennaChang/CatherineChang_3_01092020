@@ -1,15 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-body {
-  width: 90%;
-  min-width: 500px;
-  margin: auto;
-}
-
-main {
-  height: 100%;
-}
-
 h1 {
   font-family: "Shrikhand", cursive;
 }
@@ -37,8 +27,8 @@ h5 .line {
 .btn {
   cursor: pointer;
   display: block;
-  margin-left: 8rem;
-  margin-right: 8rem;
+  margin: auto;
+  max-width: 15rem;
   margin-top: 20px;
   padding: 0.3rem;
   line-height: 3em;
@@ -47,8 +37,11 @@ h5 .line {
   color: white;
   font-size: 1rem;
   font-weight: 900;
-  background: linear-gradient(#FF79DA, 20%, #9356DC);
+  background: linear-gradient(to top left, #FF79DA 20%, #9356DC);
   box-shadow: 2px 8px 8px #dbdbdb;
+}
+.btn:hover {
+  background: linear-gradient(to top left, #FF79DA 30%, #9356DC);
 }
 
 @media all and (min-width: 768px) {
@@ -83,6 +76,9 @@ header .localisation {
 }
 @media all and (min-width: 768px) {
   header .localisation {
+    position: absolute;
+    right: 3rem;
+    top: 1.5rem;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 6rem;
@@ -105,35 +101,80 @@ header .localisation i {
   }
 }
 
+footer {
+  background-color: #353535;
+  padding-bottom: 10px;
+  font-size: 0.6rem;
+  color: white;
+}
+footer h1 {
+  margin-top: 0;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+footer ul {
+  list-style: none;
+}
+footer i {
+  width: 2em;
+}
+footer a {
+  color: white;
+  font-style: normal;
+}
+
 @media all and (min-width: 768px) {
-  .main {
+  .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
 }
 
+body {
+  width: 90%;
+  min-width: 500px;
+  margin: auto;
+}
+
+main {
+  height: 100%;
+}
+
+@media all and (min-width: 768px) {
+  .main {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
 main #img__prez1 {
   background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-menu.jpg") no-repeat;
   background-size: cover;
+  background-position: center;
   position: relative;
   height: 30rem;
 }
 main #img__prez2 {
   background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-menu.jpg") no-repeat;
   background-size: cover;
+  background-position: center;
   position: relative;
   height: 30rem;
 }
 main #img__prez3 {
   background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-menu.jpg") no-repeat;
   background-size: cover;
+  background-position: center;
   position: relative;
   height: 30rem;
 }
 main #img__prez4 {
   background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-menu.jpg") no-repeat;
   background-size: cover;
+  background-position: center;
   position: relative;
   height: 30rem;
 }
@@ -148,17 +189,23 @@ main h1 {
   padding-left: 20px;
   padding-bottom: 0px;
   width: 100%;
+  box-sizing: border-box;
   background-color: #f4f4f4;
   border-radius: 4rem 4rem 0 0;
 }
-main h1 i {
+main h1 svg {
   position: absolute;
   right: 3rem;
+  bottom: 0.5rem;
   font-weight: normal;
+  stroke: black;
+  width: 1.6rem;
+  height: auto;
+  z-index: 1;
 }
-main h1 i:hover {
-  font-weight: bold;
-  color: #9356DC;
+main h1 svg:hover {
+  fill: url(#gradient);
+  stroke: url(#gradient);
 }
 
 .introduction {
@@ -171,8 +218,10 @@ main h1 i:hover {
 }
 @media all and (min-width: 768px) {
   .introduction {
-    flex: 1 auto;
-    order: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
 }
 .introduction p {
@@ -185,17 +234,11 @@ main h1 i:hover {
 }
 
 @media all and (min-width: 768px) {
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-}
-
-@media all and (min-width: 768px) {
   aside {
-    flex: 1 auto;
-    order: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
 }
 aside h2 {
@@ -209,7 +252,8 @@ aside ol {
 aside ol p {
   display: inline-block;
   width: 90%;
-  line-height: 4;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin-top: 15px;
   margin-bottom: 15px;
   background-color: #f4f4f4;
@@ -218,9 +262,14 @@ aside ol p {
   border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem 0.6rem #dbdbdb, -1px -4px 4px #f4f4f4;
 }
+aside ol p:hover {
+  background-color: #e8e8e8;
+  box-shadow: 0.5rem 0.5rem 0.4rem #dbdbdb, -1px -4px 2px #f4f4f4;
+}
 aside ol li {
   counter-increment: li;
   cursor: pointer;
+  min-width: 300px;
 }
 aside ol i {
   padding-left: 30px;
@@ -240,6 +289,14 @@ aside ol li::before {
   border-radius: 50%;
 }
 
+.main-stop {
+  stop-color: #9356DC;
+}
+
+.alt-stop {
+  stop-color: #FF79DA;
+}
+
 article {
   background-color: #f4f4f4;
   width: 100%;
@@ -248,7 +305,10 @@ article {
 }
 @media all and (min-width: 768px) {
   article {
-    order: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
   }
 }
 article a:nth-of-type(1) div:first-child {
@@ -307,42 +367,86 @@ article .restaurant__description {
   background-color: white;
   font-size: 0.8em;
   box-shadow: 2px 5px 5px #dbdbdb, -2px 0 5px #dbdbdb;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
 }
-article .restaurant__description h3 {
+article .restaurant__description:hover .check-box {
+  transform: translateX(5px);
+}
+article .restaurant__description:hover .check-box .fa-check-circle {
+  transform: rotate(360deg);
+}
+article .restaurant__description:hover .title-subtitle-price {
+  width: 75%;
+}
+article .restaurant__description .title-subtitle-price {
+  width: 100%;
+  transition: width 0.2s;
+}
+article .restaurant__description .title-subtitle-price h3 {
   margin-top: 5px;
   margin-bottom: 1px;
   margin-left: 5px;
   color: #353535;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-article .restaurant__description p {
+article .restaurant__description .title-subtitle-price .subtitle {
+  display: flex;
+  justify-content: space-between;
+}
+article .restaurant__description .title-subtitle-price .subtitle p {
   margin-top: 1px;
   margin-bottom: 2px;
   margin-left: 5px;
   color: #353535;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-article .restaurant__description .fa-heart {
-  cursor: pointer;
-  position: absolute;
-  font-size: 1.2rem;
-  font-weight: lighter;
-  color: #353535;
-  right: 2rem;
-  top: 0.7em;
-}
-article .restaurant__description .fa-heart:hover {
+article .restaurant__description .title-subtitle-price .subtitle span {
+  padding-right: 1rem;
+  padding-left: 0.5rem;
   font-weight: bold;
-  color: #9356DC;
 }
-article .restaurant__description .fa-check-circle {
+article .restaurant__description svg {
   cursor: pointer;
   position: absolute;
-  font-size: 1.2rem;
-  font-weight: lighter;
-  color: #353535;
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: auto;
   right: 2rem;
   top: 0.7em;
-  color: #99E2D0;
+  stroke: #353535;
+  flex-grow: 0;
+}
+article .restaurant__description svg:hover {
+  fill: url(#gradient);
+  stroke: url(#gradient);
+}
+article .restaurant__description .check-box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 85px;
+  background-color: #99E2D0;
+  transform: translateX(90px);
+  transition: transform 0.2s;
+}
+article .restaurant__description .check-box .fa-check-circle {
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  margin-top: -0.8rem;
+  font-size: 1.6rem;
+  color: white;
+  transform: rotate(0);
+  transition: transform 0.5s;
 }
 article .restaurant__description--arrounded {
   border-radius: 1rem;
@@ -354,34 +458,6 @@ article .restaurant__description--arrounded {
   article .restaurant__description--arrounded {
     width: 20rem;
   }
-}
-article .restaurant__description span {
-  position: absolute;
-  right: 4rem;
-  bottom: 1rem;
-  font-weight: bold;
-}
-
-footer {
-  background-color: #353535;
-  padding-bottom: 10px;
-  font-size: 0.6rem;
-  color: white;
-}
-footer h1 {
-  margin-top: 0;
-  padding-top: 20px;
-  padding-left: 40px;
-}
-footer ul {
-  list-style: none;
-}
-footer i {
-  width: 2em;
-}
-footer a {
-  color: white;
-  font-style: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
