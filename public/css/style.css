@@ -24,147 +24,86 @@
 }
 
 .container > a:nth-of-type(1) {
-  animation: menu 2s 1.3s both;
+  animation: menu 2s 3.3s both;
 }
 .container > a:nth-of-type(2) {
-  animation: menu 2s 1.6s both;
+  animation: menu 2s 3.6s both;
 }
 .container > a:nth-of-type(3) {
-  animation: menu 2s 1.9s both;
+  animation: menu 2s 3.9s both;
 }
 .container > a:nth-of-type(4) {
-  animation: menu 2s 2.2s both;
+  animation: menu 2s 4.2s both;
 }
 
-h1 {
-  font-family: "Shrikhand", cursive;
-}
-
-h2, h3, h4, h5, p, li, div, a {
-  font-family: "Roboto", sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-h5 {
-  text-transform: uppercase;
-  margin-left: 20px;
-  font-size: 1.2rem;
-  font-weight: normal;
-}
-h5 .line {
-  margin-top: 2px;
-  width: 35px;
-  border-top: 3px solid #99E2D0;
-}
-
-.btn {
-  cursor: pointer;
-  display: block;
-  margin: auto;
-  max-width: 15rem;
-  margin-top: 20px;
-  padding: 0.3rem;
-  line-height: 3em;
-  border-radius: 10rem;
-  text-align: center;
-  color: white;
-  font-size: 1rem;
-  font-weight: 900;
-  background: linear-gradient(to top left, #FF79DA 20%, #9356DC);
-  box-shadow: 2px 8px 8px #dbdbdb;
-}
-.btn:hover {
-  background: linear-gradient(to top left, #FF79DA 30%, #9356DC);
-}
-
-@media all and (min-width: 768px) {
-  .header {
-    display: flex;
+@keyframes custom-loading {
+  0% {
+    transform: translateY(0) rotateY(0) scaleY(0);
   }
-  .header h1 {
-    margin-left: 3rem;
+  80%, 100% {
+    transform: translateY(-10px) rotateY(1turn) scaleY(100%);
+    opacity: 0.5;
   }
 }
-
-header {
-  text-align: center;
-  position: relative;
+@keyframes opacity-loading {
+  0%, 80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-header .fa-arrow-left {
-  cursor: pointer;
+.loading-spinner {
+  pointer-events: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+  overflow: hidden;
+  background: #f4f4f4;
+  opacity: 1;
+  animation: opacity-loading 3s linear both;
+}
+.loading-spinner .cloche {
+  z-index: 10002;
   position: absolute;
-  left: 2rem;
-  top: 0.8rem;
-  font-size: 1.6rem;
-  color: black;
+  top: 50%;
+  left: 50%;
+  margin-left: -90px;
+  margin-top: -111px;
 }
-header .localisation {
-  background-color: #dbdbdb;
-  text-align: center;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  margin-top: 0%;
-  margin-bottom: 0%;
-  box-shadow: inset 0 2px 4px -3px #353535;
+.loading-spinner .plate {
+  z-index: 10001;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -107px;
+  margin-top: 11px;
 }
-@media all and (min-width: 768px) {
-  header .localisation {
-    position: absolute;
-    right: 3rem;
-    top: 1.5rem;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 6rem;
-    height: 2rem;
-    width: 20rem;
-  }
-  header .localisation p {
-    margin-top: auto;
-    margin-bottom: auto;
-    padding-top: 0.4rem;
-  }
+.loading-spinner .smoke {
+  box-sizing: border-box;
+  z-index: 10003;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  stroke: url(#gradient);
+  stroke-width: 2;
+  animation: custom-loading 3s linear both;
 }
-header .localisation i {
-  padding-left: 20px;
-  padding-right: 20px;
+.loading-spinner .smoke--1 {
+  margin-left: -30px;
+  margin-top: -150px;
 }
-@media all and (min-width: 768px) {
-  header .localisation i {
-    padding-left: 0;
-  }
+.loading-spinner .smoke--2 {
+  margin-left: -8px;
+  margin-top: -160px;
 }
-
-footer {
-  background-color: #353535;
-  padding-bottom: 10px;
-  font-size: 0.6rem;
-  color: white;
-}
-footer h1 {
-  margin-top: 0;
-  padding-top: 20px;
-  padding-left: 40px;
-}
-footer ul {
-  list-style: none;
-}
-footer i {
-  width: 2em;
-}
-footer a {
-  color: white;
-  font-style: normal;
-}
-
-@media all and (min-width: 768px) {
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
+.loading-spinner .smoke--3 {
+  margin-left: 14px;
+  margin-top: -150px;
 }
 
 body {
@@ -184,124 +123,6 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
   }
-}
-
-main #img__prez1 {
-  background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-menu.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  height: 30rem;
-}
-main #img__prez2 {
-  background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-menu.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  height: 30rem;
-}
-main #img__prez3 {
-  background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-menu.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  height: 30rem;
-}
-main #img__prez4 {
-  background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-menu.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  height: 30rem;
-}
-@media all and (min-width: 768px) {
-  main #img__prez1 {
-    background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-800x533.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    height: 30rem;
-  }
-  main #img__prez2 {
-    background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-800x1000.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    height: 30rem;
-  }
-  main #img__prez3 {
-    background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-800x533.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    height: 30rem;
-  }
-  main #img__prez4 {
-    background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-800x548.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    height: 30rem;
-  }
-}
-@media all and (min-width: 1199px) {
-  main #img__prez1 {
-    background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-1200x800.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    height: 30rem;
-  }
-  main #img__prez2 {
-    background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-1200x1500.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    height: 30rem;
-  }
-  main #img__prez3 {
-    background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-1200x800.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    height: 30rem;
-  }
-  main #img__prez4 {
-    background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-1200x822.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    height: 30rem;
-  }
-}
-main h1 {
-  position: absolute;
-  bottom: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding-top: 45px;
-  padding-left: 20px;
-  padding-bottom: 0px;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: #f4f4f4;
-  border-radius: 4rem 4rem 0 0;
-}
-main h1 svg {
-  position: absolute;
-  right: 3rem;
-  bottom: 0.5rem;
-  font-weight: normal;
-  stroke: black;
-  width: 1.6rem;
-  height: auto;
-  z-index: 1;
-}
-main h1 svg:hover {
-  fill: url(#gradient);
-  stroke: url(#gradient);
 }
 
 .introduction {
@@ -383,14 +204,6 @@ aside ol li::before {
   padding: 0.2rem 0.4rem;
   background-color: #9356DC;
   border-radius: 50%;
-}
-
-.main-stop {
-  stop-color: #9356DC;
-}
-
-.alt-stop {
-  stop-color: #FF79DA;
 }
 
 article {
@@ -554,6 +367,263 @@ article .restaurant__description--arrounded {
   article .restaurant__description--arrounded {
     width: 20rem;
   }
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+h2, h3, h4, h5, p, li, div, a {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h5 {
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+h5 .line {
+  margin-top: 2px;
+  width: 35px;
+  border-top: 3px solid #99E2D0;
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  max-width: 15rem;
+  margin-top: 20px;
+  padding: 0.3rem;
+  line-height: 3em;
+  border-radius: 10rem;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  background: linear-gradient(to top left, #FF79DA 20%, #9356DC);
+  box-shadow: 2px 8px 8px #dbdbdb;
+}
+.btn:hover {
+  background: linear-gradient(to top left, #FF79DA 30%, #9356DC);
+}
+
+@media all and (min-width: 768px) {
+  .header {
+    display: flex;
+  }
+  .header h1 {
+    margin-left: 3rem;
+  }
+}
+
+header {
+  text-align: center;
+  position: relative;
+}
+header .fa-arrow-left {
+  cursor: pointer;
+  position: absolute;
+  left: 2rem;
+  top: 0.8rem;
+  font-size: 1.6rem;
+  color: black;
+}
+header .localisation {
+  background-color: #dbdbdb;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  box-shadow: inset 0 2px 4px -3px #353535;
+}
+@media all and (min-width: 768px) {
+  header .localisation {
+    position: absolute;
+    right: 3rem;
+    top: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 6rem;
+    height: 2rem;
+    width: 20rem;
+  }
+  header .localisation p {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 0.4rem;
+  }
+}
+header .localisation i {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media all and (min-width: 768px) {
+  header .localisation i {
+    padding-left: 0;
+  }
+}
+
+footer {
+  background-color: #353535;
+  padding-bottom: 10px;
+  font-size: 0.6rem;
+  color: white;
+}
+footer h1 {
+  margin-top: 0;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+footer ul {
+  list-style: none;
+}
+footer i {
+  width: 2em;
+}
+footer a {
+  color: white;
+  font-style: normal;
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+main #img__prez1 {
+  background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-menu.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 30rem;
+}
+main #img__prez2 {
+  background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-menu.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 30rem;
+}
+main #img__prez3 {
+  background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-menu.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 30rem;
+}
+main #img__prez4 {
+  background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-menu.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 30rem;
+}
+@media all and (min-width: 768px) {
+  main #img__prez1 {
+    background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-800x533.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+  main #img__prez2 {
+    background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-800x1000.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+  main #img__prez3 {
+    background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-800x533.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+  main #img__prez4 {
+    background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-800x548.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+}
+@media all and (min-width: 1199px) {
+  main #img__prez1 {
+    background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-1200x800.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+  main #img__prez2 {
+    background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-1200x1500.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+  main #img__prez3 {
+    background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-1200x800.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+  main #img__prez4 {
+    background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-1200x822.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 30rem;
+  }
+}
+main h1 {
+  position: absolute;
+  bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 45px;
+  padding-left: 20px;
+  padding-bottom: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  border-radius: 4rem 4rem 0 0;
+}
+main h1 svg {
+  position: absolute;
+  right: 3rem;
+  bottom: 0.5rem;
+  font-weight: normal;
+  stroke: black;
+  width: 1.6rem;
+  height: auto;
+  z-index: 1;
+}
+main h1 svg:hover {
+  fill: url(#gradient);
+  stroke: url(#gradient);
+}
+
+.main-stop {
+  stop-color: #9356DC;
+}
+
+.alt-stop {
+  stop-color: #FF79DA;
 }
 
 /*# sourceMappingURL=style.css.map */

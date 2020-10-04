@@ -56,25 +56,3 @@ header{
     }
 }
 
-footer{
-    background-color: $color-grey;
-    padding-bottom: 10px;
-    font-size: 0.6rem;
-
-    color:white;    
-    & h1{
-        margin-top: 0;
-        padding-top: 20px;
-        padding-left: 40px;
-    }
-    & ul{
-        list-style: none;
-    }
-    & i{
-        width: 2em;
-    }
-    & a{
-        color:white;
-        font-style: normal;
-    }
-}
