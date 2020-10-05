@@ -5,6 +5,12 @@ $color-tertiary:#99E2D0;
 $color-grey: rgb(53,53,53);
 $color-grey2: lighten($color-grey, 65%);
 $color-grey3: lighten($color-grey, 75%);
+.main-stop {
+    stop-color: $color-primary; // for svg gradient function purpose
+}
+.alt-stop {
+    stop-color: $color-secondary; // for svg gradient function purpose
+}
 
 //Media Queries==================================
 $breakpoint:(

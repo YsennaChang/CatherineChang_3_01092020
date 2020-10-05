@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+.main-stop {
+  stop-color: #9356DC;
+}
+
+.alt-stop {
+  stop-color: #FF79DA;
+}
+
 @keyframes menu {
   0% {
     transform: translateY(30%);
@@ -41,7 +49,7 @@
     transform: translateY(0) rotateY(0) scaleY(0);
   }
   80%, 100% {
-    transform: translateY(-10px) rotateY(1turn) scaleY(1);
+    transform: translateY(-10px) rotateY(1turn) scaleY(100%);
     opacity: 0.5;
   }
 }
@@ -108,12 +116,7 @@
 
 body {
   width: 90%;
-  min-width: 500px;
   margin: auto;
-}
-
-main {
-  height: 100%;
 }
 
 @media all and (min-width: 768px) {
@@ -176,6 +179,9 @@ aside ol p {
   background-color: #f4f4f4;
   font-weight: bold;
   align-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem 0.6rem #dbdbdb, -1px -4px 4px #f4f4f4;
 }
@@ -186,7 +192,7 @@ aside ol p:hover {
 aside ol li {
   counter-increment: li;
   cursor: pointer;
-  min-width: 300px;
+  min-width: 30vh;
 }
 aside ol i {
   padding-left: 30px;
@@ -197,6 +203,7 @@ aside ol li::before {
   content: counter(li);
   position: relative;
   left: 0.6rem;
+  bottom: 2.5rem;
   color: white;
   display: inline-block;
   text-align: center;
@@ -222,26 +229,32 @@ article {
 }
 article a:nth-of-type(1) div:first-child {
   background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash 380 x 253.jpg") no-repeat;
-  max-width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 article a:nth-of-type(2) div:first-child {
   background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash380x316.jpg") no-repeat;
-  max-width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 article a:nth-of-type(3) div:first-child {
   background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash380x193.jpg") no-repeat;
-  max-width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 article a:nth-of-type(4) div:first-child {
   background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash380x260.jpg") no-repeat;
-  max-width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 article h2 {
   padding-top: 0px;
   padding-left: 60px;
 }
 article .restaurant {
-  width: 380px;
+  width: 90%;
+  min-width: 30vh;
+  max-width: 60vh;
   margin-left: auto;
   margin-right: auto;
 }
@@ -616,14 +629,6 @@ main h1 svg {
 main h1 svg:hover {
   fill: url(#gradient);
   stroke: url(#gradient);
-}
-
-.main-stop {
-  stop-color: #9356DC;
-}
-
-.alt-stop {
-  stop-color: #FF79DA;
 }
 
 /*# sourceMappingURL=style.css.map */

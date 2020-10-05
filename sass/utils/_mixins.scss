@@ -14,7 +14,8 @@
     @each $i, $url in $images {
         & a:nth-of-type(#{$i}) div:first-child {
             background: url(map-get($images, $i)) no-repeat;
-            max-width: 100%;
+            background-size: cover;
+            background-position: center;
         }
     }
 }
