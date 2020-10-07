@@ -336,7 +336,7 @@ article .restaurant {
 }
 @media all and (min-width: 1023px) {
   article .restaurant {
-    max-width: 40vh;
+    max-width: 50vh;
   }
 }
 article .restaurant__img {
@@ -563,13 +563,13 @@ footer a {
 @media all and (min-width: 700px) {
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media all and (min-width: 1400px) {
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .container--menu .menu {
@@ -578,7 +578,7 @@ footer a {
 @media all and (min-width: 1023px) {
   .container--menu {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
