@@ -4,148 +4,166 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./public/css/style.css" />
-        <script src="https://kit.fontawesome.com/d8f867de61.js" crossorigin="anonymous"></script>
+        <!-- <script src="https://kit.fontawesome.com/d8f867de61.js" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
         <title>OhMyFood - La palette du goût</title>
     </head>
-<body>
-    <header>
-        <h1><a href="index.html"><i class="fas fa-arrow-left"></i></a>ohmyfood</h1>
-    </header>
-
-    <main>
-        <div id="img__prez1"> 
-            <h1 class="tag">La palette du goût
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" class="main-stop" />
-                        <stop offset="100%" class="alt-stop" />
-                    </linearGradient>
-                    <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
-                </svg>
-            </h1>
-        </div>
-        <article>
-            <div class="container">
-                <div class="menu"> 
-                    <h5>
-                        Entrées
-                        <div class="line"></div>
-                    </h5>
-                    <div class="restaurant__description restaurant__description--arrounded">
-                        <div class="title-subtitle-price">
-                            <h3>Fricassée d'escargot</h3>
-                            <div class="subtitle">
-                                <p>au piment d'espelette</p>            
-                                <span>25€</span>
-                            </div>
-                        </div>
-                        <div class="check-box"><i class="far fa-check-circle"></i></div>
-                    </div>
-                    <div class="restaurant__description restaurant__description--arrounded">
-                        <div class="title-subtitle-price">
-                            <h3>Fois gras de canard mi-cuit</h3>
-                            <div class="subtitle">
-                                <p>Et ses copeaux de truffe noire</p> 
-                                <span>35€</span>
-                            </div>
-                        </div>
-                        <div class="check-box"><i class="far fa-check-circle"></i></div>
-                    </div>
-                    <div class="restaurant__description restaurant__description--arrounded">
-                        <div class="title-subtitle-price">
-                            <h3>Oeuf au plat</h3>
-                            <div class="subtitle">
-                                <p>Assaisonné à la truffe sur lit de caviar</p>
-                                <span>20€</span>
-                            </div>
-                        </div>
-                        <div class="check-box"><i class="far fa-check-circle"></i></div>
-                    </div>
-                </div>
-                <div class="menu">                     
-                    <h5>
-                        Plats
-                        <div class="line"></div>
-                    </h5>
-                    <div class="restaurant__description restaurant__description--arrounded">
-                        <div class="title-subtitle-price">
-                            <h3>Filet de boeuf aux herbes</h3>
-                            <div class="subtitle">
-                                <p>Accompagné de sa ribambelle de légumes</p>
-                                <span>40€</span>
-                            </div>
-                        </div>
-                        <div class="check-box"><i class="far fa-check-circle"></i></div>
-                    </div>
-                    <div class="restaurant__description restaurant__description--arrounded">
-                        <div class="title-subtitle-price">
-                            <h3>Parmentier de queue de boeuf</h3>
-                            <div class="subtitle">
-                                <p>À la truffe noire sur sa purée de panais</p>
-                                <span>35€</span>
-                            </div>
-                        </div>
-                        <div class="check-box"><i class="far fa-check-circle"></i></div>
-                    </div>
-                    <div class="restaurant__description restaurant__description--arrounded">
-                        <div class="title-subtitle-price">
-                            <h3>Filet de turbot</h3>
-                            <div class="subtitle">
-                                <p>Aux agrumes</p>
-                                <span>44€</span>
-                            </div>
-                        </div>
-                        <div class="check-box"><i class="far fa-check-circle"></i></div>
-                    </div>
-                </div>
-                <div class="menu"> 
-                    <h5>
-                        Desserts
-                        <div class="line"></div>
-                    </h5>
-                    <div class="restaurant__description restaurant__description--arrounded">
-                        <div class="title-subtitle-price">
-                            <h3>Paris-Brest</h3>
-                            <div class="subtitle">
-                                <p>revisité</p>
-                                <span>18€</span>
-                            </div>
-                        </div>
-                        <div class="check-box"><i class="far fa-check-circle"></i></div>
-                    </div>
-                    <div class="restaurant__description restaurant__description--arrounded">
-                        <div class="title-subtitle-price">
-                            <h3>Macaron au chocolat d'exception </h3>
-                            <div class="subtitle">
-                                <p>Et glace à la vanille de Madagascar</p>
-                                <span>22€</span>
-                            </div>
-                        </div>
-                        <div class="check-box"><i class="far fa-check-circle"></i></div>
-                    </div>
-                    <div class="restaurant__description restaurant__description--arrounded">
-                        <div class="title-subtitle-price">
-                            <h3>Mousse au chocolat</h3>
-                            <div class="subtitle">
-                                <p>Au piment d'Espelette et à la truffe noire</p>
-                                <span>23€</span>
-                            </div>  
-                        </div>
-                        <div class="check-box"><i class="far fa-check-circle"></i></div>
+    <body>
+        <header>
+            <h1>ohmyfood</h1>
+            <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+        </header>
+        <main>
+            <!-- name the image as follow : img_prez+number of the image in the scss image variable order -->
+            <div id="img__prez1">
+                <div class="tag">
+                    <h1>La palette du goût</h1>
+                    <div class="heart">
+                        <svg class="heart heart--empty" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" class="main-stop" />
+                                <stop offset="100%" class="alt-stop" />
+                            </linearGradient>
+                            <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                        </svg>
+                        <svg class="heart heart--full" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                        </svg>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">Commander</a>
-        </article>
-    </main>
-    <footer>
-        <h1>ohmyfood</h1>
-        <ul>
-            <li><p><i class="fas fa-utensils"></i>Proposer un restaurant</p></li>
-            <li><p><i class="fas fa-hands-helping"></i>Devenir partenaire</p></li>
-            <li><p>Mentions légales</p></li>
-            <li><address><a href="mailto:#">Contact</a></address></li>
-        </ul>
-    </footer>
-</body>
+            <article>
+                <div class="container container--menu">
+                    <div class="menu">
+                        <div class="courses">
+                            <h5>Entrées</h5>
+                            <div class="line"></div>
+                        </div>                        
+                        <div class="restaurant__description restaurant__description--arrounded">
+                            <div class="title-subtitle-price">
+                                <h3>Fricassée d'escargot</h3>
+                                <div class="subtitle">
+                                    <p>au piment d'espelette</p>            
+                                    <span>25€</span>
+                                </div>
+                            </div>
+                            <div class="check-box"><i class="far fa-check-circle"></i></div>
+                        </div>
+                        <div class="restaurant__description restaurant__description--arrounded">
+                            <div class="title-subtitle-price">
+                                <h3>Fois gras de canard mi-cuit</h3>
+                                <div class="subtitle">
+                                    <p>Et ses copeaux de truffe noire</p> 
+                                    <span>35€</span>
+                                </div>
+                            </div>
+                            <div class="check-box"><i class="far fa-check-circle"></i></div>
+                        </div>
+                        <div class="restaurant__description restaurant__description--arrounded">
+                            <div class="title-subtitle-price">
+                                <h3>Oeuf au plat</h3>
+                                <div class="subtitle">
+                                    <p>Assaisonné à la truffe sur lit de caviar</p>
+                                    <span>20€</span>
+                                </div>
+                            </div>
+                            <div class="check-box"><i class="far fa-check-circle"></i></div>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <div class="courses">
+                            <h5>Plats</h5>
+                            <div class="line"></div>
+                        </div>
+                        <div class="restaurant__description restaurant__description--arrounded">
+                            <div class="title-subtitle-price">
+                                <h3>Filet de boeuf aux herbes</h3>
+                                <div class="subtitle">
+                                    <p>Accompagné de sa ribambelle de légumes</p>
+                                    <span>40€</span>
+                                </div>
+                            </div>
+                            <div class="check-box"><i class="far fa-check-circle"></i></div>
+                        </div>
+                        <div class="restaurant__description restaurant__description--arrounded">
+                            <div class="title-subtitle-price">
+                                <h3>Parmentier de queue de boeuf</h3>
+                                <div class="subtitle">
+                                    <p>À la truffe noire sur sa purée de panais</p>
+                                    <span>35€</span>
+                                </div>
+                            </div>
+                            <div class="check-box"><i class="far fa-check-circle"></i></div>
+                        </div>
+                        <div class="restaurant__description restaurant__description--arrounded">
+                            <div class="title-subtitle-price">
+                                <h3>Filet de turbot</h3>
+                                <div class="subtitle">
+                                    <p>Aux agrumes</p>
+                                    <span>44€</span>
+                                </div>
+                            </div>
+                            <div class="check-box"><i class="far fa-check-circle"></i></div>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <div class="courses">
+                            <h5>Desserts</h5>
+                            <div class="line"></div>
+                        </div>
+                        <div class="restaurant__description restaurant__description--arrounded">
+                            <div class="title-subtitle-price">
+                                <h3>Paris-Brest</h3>
+                                <div class="subtitle">
+                                    <p>revisité</p>
+                                    <span>18€</span>
+                                </div>
+                            </div>
+                            <div class="check-box"><i class="far fa-check-circle"></i></div>
+                        </div>
+                        <div class="restaurant__description restaurant__description--arrounded">
+                            <div class="title-subtitle-price">
+                                <h3>Macaron au chocolat d'exception </h3>
+                                <div class="subtitle">
+                                    <p>Et glace à la vanille de Madagascar</p>
+                                    <span>22€</span>
+                                </div>
+                            </div>
+                            <div class="check-box"><i class="far fa-check-circle"></i></div>
+                        </div>
+                        <div class="restaurant__description restaurant__description--arrounded">
+                            <div class="title-subtitle-price">
+                                <h3>Mousse au chocolat</h3>
+                                <div class="subtitle">
+                                    <p>Au piment d'Espelette et à la truffe noire</p>
+                                    <span>23€</span>
+                                </div>  
+                            </div>
+                            <div class="check-box"><i class="far fa-check-circle"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">Commander</a>
+            </article>
+        </main>
+        <footer>
+            <h1>ohmyfood</h1>
+            <ul>
+                <li>
+                    <p>
+                        <i class="fas fa-utensils"></i> 
+                        Proposer un restaurant
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <i class="fas fa-hands-helping"></i> 
+                        Devenir partenaire
+                    </p>
+                </li>
+                <li><p>Mentions légales</p></li>
+                <li><address><a href="mailto:#">Contact</a></address></li>
+            </ul>
+        </footer>
+    </body>
 </html>

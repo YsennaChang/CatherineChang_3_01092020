@@ -1,7 +1,16 @@
 .container{
     @include tablet{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    @include tv {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    &--menu{
+        @include desktop{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
     }
 }

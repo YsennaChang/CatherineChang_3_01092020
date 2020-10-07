@@ -1,0 +1,46 @@
+//main menus pages==============================
+main {
+    @include url-image-menu($image-menu);
+    @include tablet{ //media queries
+        @include url-image-menu($image-menu-tablet);
+    }
+    @include desktop{//media queries
+        @include url-image-menu($image-menu-desktop);
+    }
+    .tag{
+        position: absolute;
+        box-sizing: border-box;
+        width: 100%;
+        bottom: 0;
+        background-color: $color-grey3;
+        border-radius: map-get($radius, tag) map-get($radius, tag) 0 0;
+        & h1{
+            // padding-top: 45px;
+            padding-left: 20px;
+            padding-bottom: 0px;
+        }
+        & .heart{
+            position: absolute;
+            right: 0.8rem;
+            top: 0.6rem;
+            width: 1.6rem;
+            height: auto;
+        }
+    }
+    .courses{
+        & h5{
+            text-transform: uppercase;
+            margin-left: 20px;
+            font-size: 1.2rem;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+        & .line{
+            margin-top: 2px;
+            width: 35px;
+            border-top: 3px solid $color-tertiary;
+            margin-left: 20px;
+            margin-bottom: 32px;
+        }
+    }
+}

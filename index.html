@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./public/css/style.css" />
-        <script src="https://kit.fontawesome.com/d8f867de61.js" crossorigin="anonymous"></script>
+        <!-- <script src="https://kit.fontawesome.com/d8f867de61.js" crossorigin="anonymous"></script> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
         <title>OhMyFood - Home Page</title>
     </head>
     <body>
@@ -20,7 +21,7 @@
                 <path d="M179.5 9.5L195 1H17L26.5 9.5H179.5Z" fill="black"/>
                 <path d="M0 1H17M214 1H195M195 1L179.5 9.5H26.5L17 1M195 1H17" stroke="black" stroke-width="2"/>
                 <path d="M183.5 3H46L78.5 4C112.5 4 137.5 4 183.5 3Z" fill="white" stroke="white"/>
-                </svg>                
+            </svg>
             <svg class="smoke smoke--1" width="7" height="34" viewBox="0 0 7 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3.5 33C-1 26.5 0.749997 23 3.5 17.5C7 10.5 6 7.5 3.5 1"/>
             </svg>
@@ -34,11 +35,12 @@
         <header class="header">
             <h1>ohmyfood</h1>
             <div class="localisation">
-                <p><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Paris, Belleville</p>
             </div>
         </header>
         <main class="main">
-            <div class="introduction">
+            <div class="introduction introduction--mobile">
                 <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
                 <a href="#" class="btn">Explorer nos restaurants</a>
@@ -46,94 +48,146 @@
             <aside>
                 <h2>Fonctionnement</h2>
                 <ol>
-                    <li><p><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</p></li>
-                    <li><p><i class="fas fa-list-ul"></i>Composez votre menu</p></li>
-                    <li><p><i class="fas fa-store"></i>Dégustez au restaurant</p></li>
+                    <li>
+                        <p>
+                            <i class="fas fa-mobile-alt"></i>
+                            Choisissez un restaurant
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-list-ul"></i>
+                            Composez votre menu
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-store"></i>                            
+                            Dégustez au restaurant
+                        </p>
+                    </li>
                 </ol>            
             </aside>
-            <article>
-                <h2>Restaurants</h2>
-                <div class="container">
-                    <a href="lapalettedugout.html">
-                        <section class="restaurant">
-                            <div class="restaurant__img">
-                                <span class="restaurant__img--new">Nouveau</span>
-                            </div>
-                            <div class="restaurant__description">
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" class="main-stop" />
-                                        <stop offset="100%" class="alt-stop" />
-                                    </linearGradient>
-                                    <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
-                                </svg>
-                                <div class="title-subtitle-price">
-                                    <h3>La palette du goût</h3>
-                                    <div class="subtitle">
-                                        <p>Ménilmontant</p> 
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </a>
-                    <a href="lanoteenchantee.html" >               
-                        <section class="restaurant">
-                            <div class="restaurant__img">
-                                <span class="restaurant__img--new">Nouveau</span>
-                            </div>
-                            <div class="restaurant__description">
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
-                                </svg>  
-                                <div class="title-subtitle-price">
-                                    <h3>La note enchantée</h3>
-                                    <div class="subtitle">
-                                        <p>Charonne</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </a>
-                    <a href="alafrancaise.html">
-                        <section class="restaurant">
-                            <div class="restaurant__img"></div>
-                            <div class="restaurant__description">
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
-                                </svg>
-                                <div class="title-subtitle-price">
-                                    <h3>À la française</h3>
-                                    <div class="subtitle">
-                                        <p>Cité Rouge</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </a>
-                    <a href="ledelicedessens.html">
-                        <section class="restaurant">
-                            <div class="restaurant__img"></div>
-                            <div class="restaurant__description">
-                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
-                                </svg>
-                                <div class="title-subtitle-price">
-                                    <h3>Le délice des sens</h3>
-                                    <div class="subtitle">
-                                        <p>Folie-Méricourt</p>
-                                    </div>
-                                </div>
-                            </div>                
-                        </section>
-                    </a>
+            <div class="intro-article">
+                <div class="introduction introduction--tablet">
+                    <h2>Réservez le menu qui vous convient</h2>
+                    <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                    <a href="#" class="btn">Explorer nos restaurants</a>
                 </div>
-            </article>
+                <article>
+                    <h2>Restaurants</h2>
+                    <div class="container">
+                        <a href="lapalettedugout.html">
+                            <section class="restaurant">
+                                <div class="restaurant__img">
+                                    <span class="restaurant__img--new">Nouveau</span>
+                                </div>
+                                <div class="restaurant__description">
+                                    <div class="title-subtitle-price">
+                                        <h3>La palette du goût</h3>
+                                        <div class="subtitle">
+                                            <p>Ménilmontant</p> 
+                                        </div>
+                                    </div>
+                                    <div class="heart">
+                                        <svg class="heart heart--empty" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" class="main-stop" />
+                                                <stop offset="100%" class="alt-stop" />
+                                            </linearGradient>
+                                            <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                                        </svg>
+                                        <svg class="heart heart--full" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </section>
+                        </a>
+                        <a href="lanoteenchantee.html" >               
+                            <section class="restaurant">
+                                <div class="restaurant__img">
+                                    <span class="restaurant__img--new">Nouveau</span>
+                                </div>
+                                <div class="restaurant__description">
+                                    <div class="title-subtitle-price">
+                                        <h3>La note enchantée</h3>
+                                        <div class="subtitle">
+                                            <p>Charonne</p>
+                                        </div>
+                                    </div>
+                                    <div class="heart">
+                                        <svg class="heart heart--empty" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                                        </svg>
+                                        <svg class="heart heart--full" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </section>
+                        </a>
+                        <a href="alafrancaise.html">
+                            <section class="restaurant">
+                                <div class="restaurant__img"></div>
+                                <div class="restaurant__description">
+                                    <div class="title-subtitle-price">
+                                        <h3>À la française</h3>
+                                        <div class="subtitle">
+                                            <p>Cité Rouge</p>
+                                        </div>
+                                    </div>
+                                    <div class="heart">
+                                        <svg class="heart heart--empty" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                                        </svg>
+                                        <svg class="heart heart--full" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </section>
+                        </a>
+                        <a href="ledelicedessens.html">
+                            <section class="restaurant">
+                                <div class="restaurant__img"></div>
+                                <div class="restaurant__description">
+                                    <div class="title-subtitle-price">
+                                        <h3>Le délice des sens</h3>
+                                        <div class="subtitle">
+                                            <p>Folie-Méricourt</p>
+                                        </div>
+                                    </div>
+                                    <div class="heart">
+                                        <svg class="heart heart--empty" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                                        </svg>
+                                        <svg class="heart heart--full" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.98656 2.03744C4.64079 -0.258049 6.28621 1.80044 7.48621 3.00044C7.48621 3.00044 10.6395 0.259653 12.5 1.5C14 2.5 14.7325 4.11276 13.4862 6L7.67017 14.0262L1.58021 6.02611C0.498377 4.5 1.10207 2.80239 1.98656 2.03744Z"/>
+                                        </svg>
+                                    </div>
+                                </div>                
+                            </section>
+                        </a>
+                    </div>
+                </article>
+            </div>
         </main>
         <footer>
             <h1>ohmyfood</h1>
             <ul>
-                <li><p><i class="fas fa-utensils"></i>Proposer un restaurant</p></li>
-                <li><p><i class="fas fa-hands-helping"></i>Devenir partenaire</p></li>
+                <li>
+                    <p>
+                        <i class="fas fa-utensils"></i> 
+                        Proposer un restaurant
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <i class="fas fa-hands-helping"></i> 
+                        Devenir partenaire
+                    </p>
+                </li>
                 <li><p>Mentions légales</p></li>
                 <li><address><a href="mailto:#">Contact</a></address></li>
             </ul>

@@ -8,6 +8,7 @@ $font-txt:'Roboto', sans-serif;
 
 h1 {
     font-family: $font-logo-title;
+    font-weight: normal;
 }
 
 h2, h3, h4, h5, p, li, div, a {
@@ -18,14 +19,3 @@ a{
     text-decoration: none;
 }
 
-h5{
-    text-transform: uppercase;
-    margin-left: 20px;
-    font-size: 1.2rem;
-    font-weight: normal;
-    & .line{
-        margin-top: 2px;
-        width: 35px;
-        border-top: 3px solid $color-tertiary;
-    }
-}

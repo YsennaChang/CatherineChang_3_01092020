@@ -1,31 +1,17 @@
-// *
-// {
-//     box-sizing: border-box;
-//     border: 1px solid black;
-// }
-
-
 body {
-    width: 90%;
-    // min-width: 500px;
-    margin:auto;
-
+    width: 100%;
 }
-
-main {
-    // height: 100%;
-}
-
-//main homepage=============================
-.main {
-    @include tablet{
+.main {//main homepage=============================
+    display:flex;
+    flex-direction: column;
+    @include desktop{
         display: grid;
-        flex-wrap: wrap;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1.2fr 2fr;
+    }
+    @include tv{
+        grid-template-columns: 1.2fr 3.5fr;
     }
 }
-
 .introduction {
     background-color: $color-grey3;
     text-align: center;
@@ -33,11 +19,19 @@ main {
     padding-bottom: 3em;
     line-height: 3em;
     color: $color-grey;
-    @include tablet {
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
+    &--tablet{
+        display: none;
+    }
+    &--mobile{
+        display:block;
+    }
+    @include desktop {
+        &--mobile{
+            display: none;
+        }
+        &--tablet{
+            display: block;
+        }
     }
     & p {
         display: inline-block;
@@ -48,51 +42,61 @@ main {
         overflow: auto ;
     }
 }
-
 aside {
-    @include tablet {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-
+    margin-left: 0.6rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    @include tablet{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include desktop{
+        margin-left: 0;
+        margin-right: 0;       
+    }
+    @include tablet{
+        margin-left: auto;
+        margin-right: auto;
     }
     & h2 {
         padding-top: 20px;
         padding-left: 50px;
     }
     & ol {
+        padding-left: 0;
         list-style: none;
         counter-reset: li;
-        
         & p {
             display: inline-block;
-            width: 90%;
-            padding-top: 20px;
-            padding-bottom:20px;
-            margin-top: 15px;
-            margin-bottom: 15px;    
+            margin: auto;
+            min-width: 80vw;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            margin-top: 1.2rem;
+            margin-bottom: 1.2rem;    
             background-color: $color-grey3;
             font-weight: bold;
-            align-content: center;
-            // font-size: 0.8em;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            font-size: 1.2rem;
             border-radius: map-get($radius, propal);
             box-shadow: 0.5rem 0.5rem 0.6rem $color-grey2, -1px -4px 4px $color-grey3;
+            @include desktop{
+                min-width: 20rem;
+            }
             &:hover {
                 background-color: darken($color-grey3, 5%);
                 box-shadow: 0.5rem 0.5rem 0.4rem $color-grey2, -1px -4px 2px $color-grey3;
+                & i {
+                    color: $color-primary;
+                }
             }
         }
         & li {
             counter-increment: li;
             cursor: pointer;
             min-width: 30vh;
-
         }
         & i {
+            font-size: 1.2rem;
             padding-left: 30px;
             padding-right: 20px;
             color: $color-grey;
@@ -101,18 +105,15 @@ aside {
             content: counter(li);
             position: relative;
             left: 0.6rem;
-            bottom:2.5rem;
             color: white;
-            display: inline-block;
-            text-align: center;
-            font-size: 0.7rem;
-            padding: 0.2rem 0.4rem;
+            font-size: 1.2rem;
+            padding: 0.2rem 0.6rem;
             background-color: $color-primary;
             border-radius: 50%;            
         }
     }
 }
-article {
+article {//shared by main and secondary pages
     background-color: $color-grey3;
     width: 100%;
     padding-top: 30px;
@@ -120,18 +121,18 @@ article {
     @include tablet {
         grid-column-start: 2;
         grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 4;
     }
     @include url-image-home($image-home);
     & h2 {
         padding-top: 0px;
         padding-left: 60px;
     }
-    & .restaurant {
+    & .restaurant{
         width: 90%;
-        min-width: 30vh;
-        max-width: 60vh;
+        min-width: 20vh;
+        @include desktop {
+            max-width: 40vh;
+        }
         margin-left: auto;
         margin-right: auto;
         &__img {    
@@ -154,7 +155,7 @@ article {
                 border-radius: 2px;
             }
         }
-        &__description {
+        &__description { //shared by main and secondary pages
             cursor: pointer;
             position: relative;
             border-radius: 0 0 map-get($radius,menu) map-get($radius,menu);
@@ -163,101 +164,57 @@ article {
             margin-bottom: 10px;
             padding-left: 7px;
             background-color: white;
-            font-size: 0.8em;
+            font-size: 1.2rem;
             box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;
             display: flex;
             align-items: stretch;
             overflow: hidden;
-            &:hover {
-                & .check-box {
-                    transform: translateX(5px);
-                    & .fa-check-circle{
-                        transform: rotate(360deg);
-                    }
-                }
-                & .title-subtitle-price {
-                    width: 75%;
-                }
-
+            & h3 {
+                margin-top: 5px;
+                margin-bottom: 1px;
+                margin-left: 5px;
+                color:$color-grey;
+                font-weight: bold;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
-            .title-subtitle-price {
-                width: 100%;
-                transition: width 0.2s;
-                & h3 {
-                    margin-top: 5px;
-                    margin-bottom: 1px;
+            & .subtitle {
+                display: flex;
+                justify-content: space-between;
+                & p {
+                    margin-top: 1px;
+                    margin-bottom: 2px;
                     margin-left: 5px;
                     color:$color-grey;
-                    font-weight: bold;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
-                & .subtitle {
-                    display: flex;
-                    justify-content: space-between;
-                    & p {
-                        margin-top: 1px;
-                        margin-bottom: 2px;
-                        margin-left: 5px;
-                        color:$color-grey;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
-                    & span {
-                        padding-right: 1rem;
-                        padding-left: 0.5rem;
-                        font-weight: bold;
-                    }
+                & span {
+                    padding-right: 1rem;
+                    padding-left: 0.5rem;
+                    font-weight: bold;
                 }
             }
-            & svg {
-                cursor: pointer;
+            & .heart{
                 position: absolute;
-                font-size: 1.5rem;
-                width:1.5rem;
+                right: 0.8rem;
+                top: 0.6rem;
+                width: 1.6rem;
                 height: auto;
-                right: 2rem;
-                top : 0.7em;
-                stroke: $color-grey;
-                flex-grow: 0;
-                &:hover {
-                    fill: url(#gradient);
-                    stroke: url(#gradient);
-                }
-            }
-            & .check-box {
-                position: absolute;
-                right: 0;
-                top:0;
-                height: 100%;
-                width: 85px;
-                background-color: $color-tertiary;
-                transform: translateX(90px);
-                transition: transform 0.2s;
-                & .fa-check-circle {
-                    cursor: pointer;
-                    position: absolute;
-                    right: 2rem;
-                    top:50%;
-                    margin-top: -0.8rem; //half the size of the element
-                    font-size: 1.6rem;
-                    color: white;
-                    transform: rotate(0);
-                    transition: transform 0.5s ;
-                }
             }
             &--arrounded {
                 border-radius: map-get($radius, menu);
                 width: 90%;
                 margin-left: auto;
                 margin-right: auto;
-                @include tablet {
-                    width: 20rem;
+                font-size: 1rem;
+                @include desktop{
+                    max-width: 35rem;
                 }
             }
-        }
+        }        
     }
 }
 

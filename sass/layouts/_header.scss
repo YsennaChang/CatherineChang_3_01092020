@@ -1,5 +1,5 @@
 
-.header{
+.header{ // only index page=============
     @include tablet{
         display: flex;
         h1{
@@ -12,17 +12,18 @@
 header{
     text-align: center;
     position: relative;
-
     & .fa-arrow-left{
         cursor: pointer;
         position: absolute;
         left: 2rem;
         top:0.8rem;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         color: black;
     }
-    
     & .localisation{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: $color-grey2;
         text-align: center;
         padding-top: 3px;
@@ -39,14 +40,14 @@ header{
             margin-left: 6rem;
             height: 2rem;
             width: 20rem;
-                
             p{
                 margin-top: auto;
                 margin-bottom: auto;
                 padding-top: 0.4rem;
             }
         }
-        & i{
+        & i {
+            font-size: 1rem;
             padding-left: 20px;
             padding-right: 20px;
             @include tablet{
