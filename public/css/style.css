@@ -211,10 +211,17 @@ aside {
   margin-right: 0;
   margin-bottom: 2rem;
 }
+aside h2 {
+  padding-top: 20px;
+  padding-left: 7vh;
+}
 @media all and (min-width: 700px) {
   aside {
     margin-left: auto;
     margin-right: auto;
+  }
+  aside h2 {
+    padding-left: 4vh;
   }
 }
 @media all and (min-width: 1023px) {
@@ -228,10 +235,6 @@ aside {
     margin-left: auto;
     margin-right: auto;
   }
-}
-aside h2 {
-  padding-top: 20px;
-  padding-left: 50px;
 }
 aside ol {
   padding-left: 0;
@@ -278,7 +281,7 @@ aside ol i {
 aside ol li::before {
   content: counter(li);
   position: relative;
-  left: 0.6rem;
+  left: 1rem;
   color: white;
   font-size: 1.2rem;
   padding: 0.2rem 0.6rem;
@@ -289,14 +292,12 @@ aside ol li::before {
 article {
   background-color: #f4f4f4;
   width: 100%;
-  padding-top: 30px;
+  padding-top: 2px;
   padding-bottom: 55px;
 }
-@media all and (min-width: 700px) {
-  article {
-    grid-column-start: 2;
-    grid-column-end: 4;
-  }
+article h2 {
+  padding-top: 0px;
+  padding-left: 4vh;
 }
 article a:nth-of-type(1) > section:first-of-type > div:first-child {
   background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash 380 x 253.jpg") no-repeat;
@@ -318,13 +319,18 @@ article a:nth-of-type(4) > section:first-of-type > div:first-child {
   background-size: cover;
   background-position: center;
 }
-article h2 {
-  padding-top: 0px;
-  padding-left: 60px;
+@media all and (min-width: 700px) {
+  article {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  article h2 {
+    padding-left: 2vh;
+  }
 }
 article .restaurant {
   width: 90%;
-  min-width: 20vh;
+  min-width: 20vmax;
   margin-left: auto;
   margin-right: auto;
 }
@@ -442,11 +448,11 @@ a {
   color: white;
   font-size: 1rem;
   font-weight: 900;
-  background: linear-gradient(to top left, #FF79DA 20%, #9356DC);
+  background: linear-gradient(to top left, #9356DC 20%, #FF79DA);
   box-shadow: 2px 8px 8px #dbdbdb;
 }
 .btn:hover {
-  background: linear-gradient(to top left, #FF79DA 30%, #9356DC);
+  background: linear-gradient(to top left, #9356DC 10%, #FF79DA);
 }
 
 .heart--empty {
@@ -566,6 +572,9 @@ footer a {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+.container--menu .menu {
+  margin-bottom: 3rem;
+}
 @media all and (min-width: 1023px) {
   .container--menu {
     display: grid;
@@ -672,16 +681,18 @@ main .tag {
 main .tag h1 {
   padding-left: 20px;
   padding-bottom: 0px;
+  padding-top: 12px;
 }
 main .tag .heart {
   position: absolute;
-  right: 0.8rem;
-  top: 0.6rem;
-  width: 1.6rem;
+  right: 3vw;
+  top: 1.2rem;
+  width: 1.8rem;
   height: auto;
 }
 main .courses h5 {
   text-transform: uppercase;
+  margin-top: 0;
   margin-left: 20px;
   font-size: 1.2rem;
   font-weight: normal;

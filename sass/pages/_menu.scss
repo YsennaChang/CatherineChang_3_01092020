@@ -18,18 +18,20 @@ main {
             // padding-top: 45px;
             padding-left: 20px;
             padding-bottom: 0px;
+            padding-top: 12px
         }
         & .heart{
             position: absolute;
-            right: 0.8rem;
-            top: 0.6rem;
-            width: 1.6rem;
+            right: 3vw;
+            top: 1.2rem;
+            width: 1.8rem;
             height: auto;
         }
     }
     .courses{
         & h5{
             text-transform: uppercase;
+            margin-top: 0;
             margin-left: 20px;
             font-size: 1.2rem;
             font-weight: normal;

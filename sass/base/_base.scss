@@ -46,21 +46,25 @@ aside {
     margin-left: 0.6rem;
     margin-right: 0;
     margin-bottom: 2rem;
+    & h2 {
+        padding-top: 20px;
+        padding-left: 7vh;
+    }
     @include tablet{
         margin-left: auto;
         margin-right: auto;
+        & h2 {
+            padding-left: 4vh;
+        } 
     }
     @include desktop{
         margin-left: 0;
-        margin-right: 0;       
+        margin-right: 0;
+
     }
     @include tablet{
         margin-left: auto;
         margin-right: auto;
-    }
-    & h2 {
-        padding-top: 20px;
-        padding-left: 50px;
     }
     & ol {
         padding-left: 0;
@@ -104,7 +108,7 @@ aside {
         & li::before {
             content: counter(li);
             position: relative;
-            left: 0.6rem;
+            left: 1rem;
             color: white;
             font-size: 1.2rem;
             padding: 0.2rem 0.6rem;
@@ -116,20 +120,26 @@ aside {
 article {//shared by main and secondary pages
     background-color: $color-grey3;
     width: 100%;
-    padding-top: 30px;
+    padding-top: 2px;
     padding-bottom: 55px;
+    & h2 {
+        padding-top: 0px;
+        padding-left: 4vh;
+    }
+    @include url-image-home($image-home);
     @include tablet {
         grid-column-start: 2;
         grid-column-end: 4;
+        & h2{
+            padding-left: 2vh;
+        }
     }
-    @include url-image-home($image-home);
-    & h2 {
-        padding-top: 0px;
-        padding-left: 60px;
-    }
+    // @include desktop{
+
+    // }
     & .restaurant{
         width: 90%;
-        min-width: 20vh;
+        min-width: 20vmax;
         @include desktop {
             max-width: 40vh;
         }

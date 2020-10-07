@@ -8,6 +8,9 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
     &--menu{
+        & .menu{
+            margin-bottom:3rem;
+        }
         @include desktop{
             display:grid;
             grid-template-columns: 1fr 1fr 1fr;
