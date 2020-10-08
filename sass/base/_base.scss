@@ -70,6 +70,7 @@ aside {
         padding-left: 0;
         list-style: none;
         counter-reset: li;
+        white-space: nowrap;
         & p {
             display: inline-block;
             margin: auto;
@@ -134,9 +135,6 @@ article {//shared by main and secondary pages
             padding-left: 2vh;
         }
     }
-    // @include desktop{
-
-    // }
     & .restaurant{
         width: 90%;
         min-width: 20vmax;

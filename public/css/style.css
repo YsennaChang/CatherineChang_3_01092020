@@ -240,6 +240,7 @@ aside ol {
   padding-left: 0;
   list-style: none;
   counter-reset: li;
+  white-space: nowrap;
 }
 aside ol p {
   display: inline-block;
