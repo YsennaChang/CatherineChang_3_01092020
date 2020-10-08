@@ -81,7 +81,7 @@ aside {
             margin-bottom: 1.2rem;    
             background-color: $color-grey3;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1rem;
             border-radius: map-get($radius, propal);
             box-shadow: 0.5rem 0.5rem 0.6rem $color-grey2, -1px -4px 4px $color-grey3;
             @include desktop{
