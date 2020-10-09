@@ -211,6 +211,13 @@ article {//shared by main and secondary pages
                 top: 0.6rem;
                 width: 1.6rem;
                 height: auto;
+                & .main-stop {
+                    stop-color: $color-primary; // for svg gradient function purpose
+                }
+                & .alt-stop {
+                    stop-color: $color-secondary; // for svg gradient function purpose
+                }
+                
             }
             &--arrounded {
                 border-radius: map-get($radius, menu);

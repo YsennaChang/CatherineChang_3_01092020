@@ -18,23 +18,3 @@
         background: linear-gradient(to top left, $color-primary 10%, $color-secondary);
     }
 }
-.heart{ //only the animation part, the layout, paint parts are in base and works partials
-    &--empty{
-        z-index:1;
-        stroke: black;
-    }
-    &:hover{
-        .heart--full{
-            opacity:1;
-            transform: scale(1);
-        }
-    }
-    &--full{
-        z-index:2;
-        fill: url(#gradient);
-        stroke: url(#gradient);
-        opacity: 0;
-        transform: scale(0);
-        transition: all 0.5s;
-    }
-}
