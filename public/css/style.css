@@ -690,6 +690,12 @@ main .tag .heart {
   width: 1.8rem;
   height: auto;
 }
+main .tag .heart .main-stop {
+  stop-color: #9356DC;
+}
+main .tag .heart .alt-stop {
+  stop-color: #FF79DA;
+}
 main .courses h5 {
   text-transform: uppercase;
   margin-top: 0;

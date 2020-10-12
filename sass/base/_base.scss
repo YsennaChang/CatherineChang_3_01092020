@@ -218,7 +218,6 @@ article {//shared by main and secondary pages
                 & .alt-stop {
                     stop-color: $color-secondary; // for svg gradient function purpose
                 }
-                
             }
             &--arrounded {
                 border-radius: map-get($radius, menu);

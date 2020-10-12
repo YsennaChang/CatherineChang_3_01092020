@@ -26,6 +26,12 @@ main {
             top: 1.2rem;
             width: 1.8rem;
             height: auto;
+            & .main-stop {
+                stop-color: $color-primary; // for svg gradient function purpose
+            }
+            & .alt-stop {
+                stop-color: $color-secondary; // for svg gradient function purpose
+            }
         }
     }
     .courses{
