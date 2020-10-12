@@ -166,6 +166,7 @@
 
 body {
   width: 100%;
+  margin: 0;
 }
 
 .main {
@@ -310,22 +311,22 @@ article h2 {
   padding-left: 4vh;
 }
 article a:nth-of-type(1) > section:first-of-type > div:first-child {
-  background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash 380 x 253.jpg") no-repeat;
+  background: url("../../imgs/jay-wennington-N_Y88TWmGwA-unsplash 380 x 253.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
 article a:nth-of-type(2) > section:first-of-type > div:first-child {
-  background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash380x316.jpg") no-repeat;
+  background: url("../../imgs/stil-u2Lp8tXIcjw-unsplash380x316.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
 article a:nth-of-type(3) > section:first-of-type > div:first-child {
-  background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash380x193.jpg") no-repeat;
+  background: url("../../imgs/toa-heftiba-DQKerTsQwi0-unsplash380x193.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
 article a:nth-of-type(4) > section:first-of-type > div:first-child {
-  background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash380x260.jpg") no-repeat;
+  background: url("../../imgs/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash380x260.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -582,28 +583,28 @@ footer a {
 }
 
 main #img__prez1 {
-  background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-menu.jpg") no-repeat;
+  background: url("../../imgs/jay-wennington-N_Y88TWmGwA-unsplash-menu.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
   height: 30rem;
 }
 main #img__prez2 {
-  background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-menu.jpg") no-repeat;
+  background: url("../../imgs/stil-u2Lp8tXIcjw-unsplash-menu.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
   height: 30rem;
 }
 main #img__prez3 {
-  background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-menu.jpg") no-repeat;
+  background: url("../../imgs/toa-heftiba-DQKerTsQwi0-unsplash-menu.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
   height: 30rem;
 }
 main #img__prez4 {
-  background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-menu.jpg") no-repeat;
+  background: url("../../imgs/louis-hansel-shotsoflouis-qNBGVyOCY8Q-menu.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -611,28 +612,28 @@ main #img__prez4 {
 }
 @media all and (min-width: 700px) {
   main #img__prez1 {
-    background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-800x533.jpg") no-repeat;
+    background: url("../../imgs/jay-wennington-N_Y88TWmGwA-unsplash-800x533.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
     height: 30rem;
   }
   main #img__prez2 {
-    background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-800x1000.jpg") no-repeat;
+    background: url("../../imgs/stil-u2Lp8tXIcjw-unsplash-800x1000.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
     height: 30rem;
   }
   main #img__prez3 {
-    background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-800x533.jpg") no-repeat;
+    background: url("../../imgs/toa-heftiba-DQKerTsQwi0-unsplash-800x533.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
     height: 30rem;
   }
   main #img__prez4 {
-    background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-800x548.jpg") no-repeat;
+    background: url("../../imgs/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-800x548.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -641,28 +642,28 @@ main #img__prez4 {
 }
 @media all and (min-width: 1023px) {
   main #img__prez1 {
-    background: url("../../imgs/Redim/jay-wennington-N_Y88TWmGwA-unsplash-1200x800.jpg") no-repeat;
+    background: url("../../imgs/jay-wennington-N_Y88TWmGwA-unsplash-1200x800.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
     height: 30rem;
   }
   main #img__prez2 {
-    background: url("../../imgs/Redim/stil-u2Lp8tXIcjw-unsplash-1200x1500.jpg") no-repeat;
+    background: url("../../imgs/stil-u2Lp8tXIcjw-unsplash-1200x1500.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
     height: 30rem;
   }
   main #img__prez3 {
-    background: url("../../imgs/Redim/toa-heftiba-DQKerTsQwi0-unsplash-1200x800.jpg") no-repeat;
+    background: url("../../imgs/toa-heftiba-DQKerTsQwi0-unsplash-1200x800.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
     height: 30rem;
   }
   main #img__prez4 {
-    background: url("../../imgs/Redim/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-1200x822.jpg") no-repeat;
+    background: url("../../imgs/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash-1200x822.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
