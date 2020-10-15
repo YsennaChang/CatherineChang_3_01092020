@@ -1,6 +1,6 @@
 // animations=====================================
-$number-of-receipe: 4+1+1;//Need to be adjusted in function of the maximum of number of receipe there is in the menus +1.
-$number-of-restaurant: 4+1;//Need to be adjusted in function of the number of restaurants represented +1.
+$number-of-receipe: 4+1;//Need to be adjusted in function of the maximum of number of receipe there is in the menus +1.
+$number-of-restaurant: 4;//Need to be adjusted in function of the number of restaurants represented +1.
 $anim-delay: 0.3s;
 
 @keyframes menu {
@@ -15,7 +15,7 @@ $anim-delay: 0.3s;
 }
 
 .menu {// display menu's animation=======================
-        @for $i from 1 to $number-of-receipe {
+        @for $i from 2 through $number-of-receipe {
             &>div:nth-of-type(#{$i}){
             animation: menu 1s 1s+$anim-delay*$i both;
             }
@@ -23,7 +23,7 @@ $anim-delay: 0.3s;
 }
 
 .container { //display restaurant's animation=================
-    @for $i from 1 to $number-of-restaurant {
+    @for $i from 1 through $number-of-restaurant {
         &>a:nth-of-type(#{$i}) {
             animation: menu 2s 3s+$anim-delay*$i both;
         }

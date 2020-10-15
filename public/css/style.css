@@ -10,9 +10,6 @@
     opacity: 100%;
   }
 }
-.menu > div:nth-of-type(1) {
-  animation: menu 1s 1.3s both;
-}
 .menu > div:nth-of-type(2) {
   animation: menu 1s 1.6s both;
 }
