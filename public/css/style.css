@@ -176,7 +176,7 @@ body {
     grid-template-columns: 1.2fr 2fr;
   }
 }
-@media all and (min-width: 1900px) {
+@media all and (min-width: 1400px) {
   .main {
     grid-template-columns: 1.2fr 3.5fr;
   }
@@ -566,7 +566,7 @@ footer a {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media all and (min-width: 1900px) {
+@media all and (min-width: 1400px) {
   .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -699,7 +699,7 @@ main .tag .heart .alt-stop {
 main .courses {
   margin-left: auto;
   margin-right: auto;
-  max-width: 90%;
+  width: 90%;
 }
 @media all and (min-width: 1023px) {
   main .courses {
