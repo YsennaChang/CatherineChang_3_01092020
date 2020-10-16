@@ -35,20 +35,24 @@ main {
         }
     }
     .courses{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+        @include desktop{
+            max-width: 35rem;
+        }
         & h5{
             text-transform: uppercase;
             margin-top: 0;
-            margin-left: 20px;
+            margin-bottom: 0;
             font-size: 1.2rem;
             font-weight: normal;
-            margin-bottom: 0;
         }
         & .line{
             margin-top: 2px;
+            margin-bottom: 32px;
             width: 35px;
             border-top: 3px solid $color-tertiary;
-            margin-left: 20px;
-            margin-bottom: 32px;
         }
     }
 }

@@ -176,7 +176,7 @@ body {
     grid-template-columns: 1.2fr 2fr;
   }
 }
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1900px) {
   .main {
     grid-template-columns: 1.2fr 3.5fr;
   }
@@ -566,7 +566,7 @@ footer a {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1900px) {
   .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -696,20 +696,28 @@ main .tag .heart .main-stop {
 main .tag .heart .alt-stop {
   stop-color: #FF79DA;
 }
+main .courses {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+}
+@media all and (min-width: 1023px) {
+  main .courses {
+    max-width: 35rem;
+  }
+}
 main .courses h5 {
   text-transform: uppercase;
   margin-top: 0;
-  margin-left: 20px;
+  margin-bottom: 0;
   font-size: 1.2rem;
   font-weight: normal;
-  margin-bottom: 0;
 }
 main .courses .line {
   margin-top: 2px;
+  margin-bottom: 32px;
   width: 35px;
   border-top: 3px solid #99E2D0;
-  margin-left: 20px;
-  margin-bottom: 32px;
 }
 
 /*# sourceMappingURL=style.css.map */
