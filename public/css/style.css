@@ -301,7 +301,7 @@ article {
   background-color: #f4f4f4;
   width: 100%;
   padding-top: 2px;
-  padding-bottom: 55px;
+  padding-bottom: 70px;
 }
 article h2 {
   padding-top: 0px;
@@ -482,6 +482,9 @@ header {
   text-align: center;
   position: relative;
 }
+header a {
+  color: black;
+}
 header .fa-arrow-left {
   cursor: pointer;
   position: absolute;
@@ -532,7 +535,7 @@ header .localisation i {
 
 footer {
   background-color: #353535;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   font-size: 1.2rem;
   color: white;
 }

@@ -10,8 +10,11 @@
 }
 
 header{
-    text-align: center;
+    text-align: center;    
     position: relative;
+    & a{
+        color: black;
+    }
     & .fa-arrow-left{
         cursor: pointer;
         position: absolute;
